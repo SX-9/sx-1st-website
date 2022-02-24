@@ -1,0 +1,40 @@
+h3 { 
+      text-align: center;
+      font-family: georgia;
+}
+
+img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 20%;
+}
+
+p {
+      text-align: center;
+      color: #ffffff;
+      font-family: courier;
+}
+
+body {
+      background: url(gradient.png);
+}
+
+h2 {
+						color: #aadfff;
+						text-align: center;
+}
+
+h1 {
+      text-align: center;
+      font-family: verdana;
+      color: #00e1ff;
+}
+
+legend {
+						color: #ffffff;
+}
+
+fieldset {
+						background: #000000;
+}
