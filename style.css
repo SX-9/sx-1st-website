@@ -1,9 +1,4 @@
-@font-face { 
-	font-family: mc; 
-	src: url(minecraft_font.ttf); 
-}
-
-h3 { 
+h3{ 
       text-align: center;
       font-family: georgia;
 }
