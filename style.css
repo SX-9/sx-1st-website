@@ -1,4 +1,70 @@
-h3{ 
+.rainbow {
+  color: #ffffff;
+  animation-name: colors;
+  animation-duration: 15s;
+}
+
+.spin {
+  animation-name: rotate;
+  animation-duration: 100s;
+}
+
+.fade {
+		animation-name: fade-in;
+		animation-duration: 5s;
+}
+
+@keyframes colors {
+  0% {color: #ff1569;}
+  5% {color: #d9ff6a;}
+  10% {color: #6655ff;}
+  15% {color: #6affb6;}
+  20% {color: #f855ff;}
+  25% {color: #ff1569;}
+  30% {color: #d9ff6a;}
+  35% {color: #6655ff;}
+  40% {color: #6affb6;}
+  45% {color: #f855ff;}
+  50% {color: #ff1569;}
+  55% {color: #d9ff6a;}
+  60% {color: #6655ff;}
+  65% {color: #6affb6;}
+  70% {color: #f855ff;}
+  75% {color: #ff1569;}
+  80% {color: #d9ff6a;}
+  85% {color: #6655ff;}
+  90% {color: #6affb6;}
+  95% {color: #f855ff;}
+  100% {color: #ffffff;}
+}
+
+@keyframes rotate {
+  0% {transform: rotate(20deg);}
+  1% {transform: rotate(40deg);}
+  2% {transform: rotate(60deg);}
+  3% {transform: rotate(80deg);}
+  4% {transform: rotate(100deg);}
+  5% {transform: rotate(120deg);}
+  6% {transform: rotate(140deg);}
+  7% {transform: rotate(160deg);}
+  8% {transform: rotate(180deg);}
+  9% {transform: rotate(200deg);}
+  10% {transform: rotate(220deg);}
+  11% {transform: rotate(240deg);}
+  12% {transform: rotate(260deg);}
+  13% {transform: rotate(280deg);}
+  14% {transform: rotate(300deg);}
+  15% {transform: rotate(320deg);}
+  16% {transform: rotate(340deg);}
+  17% {transform: rotate(360deg);}
+}
+
+@keyframes fade-in {
+		0% {opacity: 0;}
+		100% {opacity: 100;}
+}
+
+h3 { 
       text-align: center;
       font-family: georgia;
 }
@@ -33,7 +99,7 @@ h1 {
 
 legend {
 						color: #ffffff;
-	          text-align: center;
+						text-align: center;
 }
 
 fieldset {
