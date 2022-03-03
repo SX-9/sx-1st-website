@@ -1,17 +1,111 @@
 .rainbow {
   color: #ffffff;
   animation-name: colors;
-  animation-duration: 15s;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
 }
 
 .spin {
   animation-name: rotate;
-  animation-duration: 100s;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
 }
 
-.fade {
+.fade-in {
 		animation-name: fade-in;
-		animation-duration: 5s;
+		animation-duration: 4s;
+}
+
+.glitch {
+		animation-name: glitch;
+		animation-name: stack;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+}
+
+.nav-bar-unselected {
+		color: #4e4e4e;
+}
+
+.arial-font {
+		font-family: arial;
+		color: #ffffff;
+}
+
+.advert {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+      height: 25px;
+}
+
+.circle {
+						height: 75px;
+						width: 75px;
+						border-radius: 50%;
+}
+
+.grab {
+						cursor: grab;
+}
+
+.white {
+						color: #ffffff;
+}
+
+.black {
+						color: #000000;
+}
+
+.yellow {
+						color: #ffd215;
+}
+
+.red {
+						color: #ff2a4a;
+}
+
+.blue {
+						color: #408cff;
+}
+
+.blurple {
+						color: #6666ff;
+}
+
+.green {
+						color: #51ff2a;
+}
+
+.cyan {
+						color: #00e1ff;
+}
+
+.outline {
+						outline: #8098ff;
+}
+
+.box { 
+      perspective: 120px; 
+} 
+
+.coin { 
+      width: 2em; 
+      height: 2em; 
+      border-radius: 100%; 
+      border: 4px solid #00e1ff; 
+      animation: spin 1.5s ease-in-out infinite; 
+} 
+
+.giant {
+						font-size: 300px;
+}
+
+
+
+@keyframes spin { 
+  to { transform: rotateY(540deg); } 
 }
 
 @keyframes colors {
@@ -34,7 +128,7 @@
   80% {color: #d9ff6a;}
   85% {color: #6655ff;}
   90% {color: #6affb6;}
-  95% {color: #f855ff;}
+  95% {color: #f855ff;}    
   100% {color: #ffffff;}
 }
 
@@ -73,21 +167,63 @@ img {
       display: block;
       margin-left: auto;
       margin-right: auto;
-      border-radius: 20%;
+      border-radius: 5%;
 }
 
 p {
       text-align: center;
       color: #ffffff;
       font-family: courier;
+      font-weight: bold;
+      font-size: 25px;
 }
 
 body {
       background: url(gradient.png);
+    		animation-name: fade-in;
+	    	animation-duration: 5s;
 }
 
 h2 {
 						color: #aadfff;
+						text-align: center;
+						font-size: 30p
+
+h1 {
+      text-align: center;
+      font-family: verdana;
+      color: #00e1ff;
+}x;
+}
+
+legend {
+						color: #ffffff;
+						text-align: center;
+						font-size: 20px;
+}
+
+fieldset {
+						background: #000000;
+						border-color: #8098ff;
+						width: 350px;
+						margin: auto;
+						border-radius: 10%;
+}
+
+summary {
+						color: #ffffff;
+						text-align: center;
+						font-family: georgia;
+}
+
+hr {
+						width: 350px;
+						margin: auto;
+}
+
+div {
+						margin: auto;
+						color: #ffffff;
 						text-align: center;
 }
 
@@ -97,11 +233,46 @@ h1 {
       color: #00e1ff;
 }
 
-legend {
-						color: #ffffff;
-						text-align: center;
+button {
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.5em 1em  ;
+  outline: none;
+  border: none;
+  background-color: #000000;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+  margin: auto;
+  border-radius: 10%;
+  display: inline-block; 
+  margin: 0 auto;
+  text-align: center;
+  position: center;
+  top: 50%;
 }
 
-fieldset {
-						background: #000000;
+button::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #47ff40;
+  transform-origin: center;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #161616;
+}
+
+button:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
 }
