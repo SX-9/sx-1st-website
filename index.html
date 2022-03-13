@@ -1,3 +1,4 @@
+<!--INDEX.HTML-->
 <!DOCTYPE html>
 <html prefix="og: https://ogp.me/ns#" lang="en">
 				<head>
@@ -23,9 +24,9 @@
 										<img class="banner" src="banner.png" alt="banner">
 										<br>
 										<img class="circle spin pfp-overlay" src="avatar.png" alt="Avatar"> 		 		
-						  		<big><h1 class="cyan glitch">SX Spy Agent</h1></big>
-								  <p>Hi, Im SX! Wanna be Friends?</p>
-								<h3 class="arial-font"><a class="rainbow" href="https://discord.gg/JRmpduCbkm">Join</a> <ins>Home</ins> <a href="#about" class="nav-bar-unselected">About</a> <a href="mailto:sx-91@outlook.com" class="nav-bar-unselected">Contact</a></h3> 		
+						  		<big><h1 class="title cyan" id="title">SX Spy Agent</h1></big>
+								  <p id="p1">Hi, Im SX! Wanna be Friends?</p>
+								<h3 id="p2" class="arial-font"><a class="rainbow" href="https://discord.gg/JRmpduCbkm">Join</a> <ins>Home</ins> <a href="#about" class="nav-bar-unselected">About</a> <a href="mailto:sx-91@outlook.com" class="nav-bar-unselected">Contact</a></h3> 		
  		
 								<hr size="1"> 
 								<br>	
@@ -34,17 +35,18 @@
 														<br>
 														<div>
 														<a href="https://discord.gg/JRmpduCbkm">		 
-														<button class="blurple grab">Discord</button>
+														<button class="blurple grab background-rpc">Discord</button>
 								</a>
 								<a href="https://twitter.com/SX_Discord">
-														<button class="blue grab">Twitter</button>
+														<button class="blue grab background-rpc">Twitter</button>
 								</a>
 								<a href="https://youtube.com/channel/UC809q0q0Vt38DvJK7F35LAQ">		 
-														<button class="red grab">YouTube</button>
+														<button class="red grab background-rpc">YouTube</button>
 								</a>
 								<a href="https://github.com/SX-9">	
-														<button class="white grab">Github</button>
+														<button class="white grab background-rpc">Github</button>
 								</a>
+								<button onclick="share()" class="green background-rpc">Share</button>
 								</div>
 								</details>
 								<br>
@@ -55,13 +57,32 @@
 																				<div class="coin"></div>
 														</div>
 														<h2>Who Am I?</h2>
-														<p>Im A <span class="blurple" title="SX-Spy-Agent#1377">Discord</span> User!<br>Learning <span class="yellow" title="This is my 1st website!">HTML</span> and <span class="green" title="I dont learn it most of the time...">NodeJS</span>!<br>I Like <span class="green" title="I dont play it yet.">Minecraft</span>!</p>
+														<p id="p3">Im A <span class="blurple" title="SX-Spy-Agent#1377">Discord</span> User!<br>Learning <span class="yellow" title="This is my 1st website!">HTML</span> and <span class="green" title="I dont learn it most of the time...">NodeJS</span>!<br>I Like <span class="green" title="I dont play it yet.">Minecraft</span>!</p>
 														<h2>Note For SX!</h2>
 														<p class="red outline" contenteditable="true">Click Here And Type Something!</p>
 														<h2>Contact Me!</h2>
 														<marquee direction="up" class="border" behavior="alternate">
-																				<marquee behavior="alternate" class="no-contact glitch">Connection Lost!</marquee>
+																				<marquee behavior="alternate" class="no-contact">Connection Lost!</marquee>
 														</marquee>
+														<br>
+														<h2>Play Games!</h2>
+														<noscript>Sorry, your browser does not support JavaScript!</noscript>
+														<canvas id="gc" width="300" height="400"></canvas>
+														<p id="p4">Use The Arrow Keys To Control It!</p>
+														<hr size="1">
+														<p id="p5">Pick Rock, Paper, or Sicssor!</p>
+														<p id="rpc-answear" class="green">Pick And I Will Answear!</p>
+														<div>
+																				<button onclick="rpc()" class="white background-rpc">Rock</button>
+																				<button onclick="rpc()" class="white background-rpc">Paper</button>
+																				<button onclick="rpc()" class="white background-rpc">Sicssor</button>
+														</div>
+														<h2>My Community Discord!</h2>
+														<iframe src="https://discord.com/widget?id=882598614411649065&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+														<h2 class="red">DANGER ZONE!</h2>
+														<div>
+																				<button onclick="light()" class="white background-rpc" id="toggle">Activate Light Mode</button>
+														</div>
 														<br>
 								</fieldset>
 								<br>
@@ -69,8 +90,8 @@
 														<img class="advert grab" src="advert.gif" alt="Advertisement">
 								</a>
 								<address>
-						      		<p class="grab rainbow" id="secret"></p>
+						      		<p class="grab rainbow" id="secret" onclick="reveal()"></p>
 								</address>
-								<script src="life.js"></script>
 				</body>
+				<script src="life.js"></script>
 </html>
