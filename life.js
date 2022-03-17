@@ -1,33 +1,72 @@
 //LIFE.JS
 var welcome = "Hi, Welcome to SX's 1st Website!";
-var suprise = "R̶̲̋ė̴͙ă̸̼d̸̮͝T̴͍͗ĥ̵̩ē̶͓C̷͈͝o̵͙̓ṉ̷͠s̵̫̈́ô̴̰ḻ̸͐e̷̛̖"
-var link = "1st.sx9.repl.co"
+var suprise = "R̶̲̋ė̴͙ă̸̼d̸̮͝T̴͍͗ĥ̵̩ē̶͓C̷͈͝o̵͙̓ṉ̷͠s̵̫̈́ô̴̰ḻ̸͐e̷̛̖";
+var link = "1st.sx9.repl.co";
 var answear = ['Rock', 'Paper', 'Scissor']; 
 var picker = answear[Math.floor(Math.random()*answear.length)];
-var colors = ['red', 'lime', 'cyan', 'yellow']
+var colors = ['red', 'lime', 'cyan', 'yellow'];
 var random = colors[Math.floor(Math.random()*colors.length)];
-var mess = "ReadTheConsole"
-var h1 = document.querySelector("h1.title");
+var mess = "ReadTheConsole";
+var formEmail = document.getElementById("formEmail").value;
 
-h1.addEventListener("mouseover", glitch);
-h1.addEventListener("mouseout", unglitch);
+document.querySelector("h1.title").addEventListener("mouseover", glitch);
+document.querySelector("h1.title").addEventListener("mouseout", unglitch);
+
+function formSubmit() {
+      if(formEmail.length < 0) {
+      						document.getElementById("errorMess").innerHTML = "Error: Email Is Required!";
+      } else {
+						document.getElementById("submit").href = "mailto:sx-91@outlook.com?subject=A%20New%20Form%20Submition%20From%20Your%20Website!&body=From%3A%20" + document.getElementById("formName").value + "%0AEmail%3A%20" + document.getElementById("formEmail").value + "%0AMessage%3A%20" + document.getElementById("formMess").value;
+						}
+}
+
+function destroy() {
+						document.getElementById("body").style.opacity = "0%";
+						document.getElementById("body").style.backgroundImage = "url('white.jpg')"
+					 document.getElementById("body").style.cursor = "wait";
+}
+
+function edit() {
+					document.getElementById("edit").innerHTML = "Please Wait For 3s...";
+						setTimeout(editWebsite, 3000)
+}
+
+function say(line1, line2) {
+						console.log(line1);
+						console.log(line2)
+}
+
+function editWebsite() {
+						document.getElementById("body").contentEditable = "true";
+ document.getElementById("edit").style.color = "red";
+						document.getElementById("edit").innerHTML = "REFRESH TO TURN OFF EDIT MODE!!!";
+						alert("Edit Mode Is Now On!")
+}
 
 function light() {
-					document.getElementById("toggle").innerHTML = "Please Wait For 3s...";
+					document.getElementById("light").innerHTML = "Please Wait For 3s...";
 						setTimeout(lightModeToggle, 3000)
 }
 
 function lightModeToggle() {
-					 document.getElementById("toggle").style.color = "red";
-						document.getElementById("toggle").style.backgroundColor = "white";
-						document.getElementById("toggle").innerHTML = "REFRESH TO TURN OFF LIGHT MODE!!!";
+					 document.getElementById("light").style.color = "red";
+						document.getElementById("light").innerHTML = "REFRESH TO TURN OFF LIGHT MODE!!!";
 						alert("Light Mode Is Now On!")
-						document.getElementById("about").style.backgroundColor = "white";
+						document.getElementById("card").style.backgroundColor = "white";
 						document.getElementById("p1").style.color = "black";
 						document.getElementById("p2").style.color = "black";
 						document.getElementById("p3").style.color = "black";
 						document.getElementById("p4").style.color = "black";
 						document.getElementById("p5").style.color = "black";
+						document.getElementById("label1").style.color = "black";
+						document.getElementById("label2").style.color = "black";
+						document.getElementById("label3").style.color = "black";
+						document.getElementById("formName").style.color = "white";
+						document.getElementById("formEmail").style.color = "white";
+						document.getElementById("formMess").style.color = "white";
+						document.getElementById("formName").style.backgroundColor = "black";
+						document.getElementById("formEmail").style.backgroundColor = "black";
+						document.getElementById("formMess").style.backgroundColor = "black";	
 						document.body.style.backgroundImage = "url('white.jpg')";
 }
 
@@ -49,11 +88,12 @@ function rpc()
 }
 
 function share() {
-      navigator.clipboard.writeText(link);
-						alert("Copied The Website Link!");
+      navigator.clipboard.writeText("1st.sx9.replco");
+		  	alert("Copied The Website Link!");
 }
 
 console.log('System: ' + welcome);
+console.log('Warning: DO NOT RUN destroy()')
 
 document.getElementById("secret").innerHTML = suprise;
 
