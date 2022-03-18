@@ -29,12 +29,14 @@ for (var typingElement of typingElements) {
     }, 75);
 } 
 
+document.getElementById("popup").showModal();
+
+function closePopup() {
+						document.getElementById("popup").close();
+}
+
 function formSubmit() {
-      if(formEmail.length < 0) {
-      						document.getElementById("errorMess").innerHTML = "Error: Email Is Required!";
-      } else {
 						document.getElementById("submit").href = "mailto:sx-91@outlook.com?subject=A%20New%20Form%20Submition%20From%20Your%20Website!&body=From%3A%20" + document.getElementById("formName").value + "%0AEmail%3A%20" + document.getElementById("formEmail").value + "%0AMessage%3A%20" + document.getElementById("formMess").value;
-						}
 }
 
 function destroy() {
@@ -48,16 +50,11 @@ function edit() {
 						setTimeout(editWebsite, 3000)
 }
 
-function say(line1, line2) {
-						console.log(line1);
-						console.log(line2)
-}
-
 function editWebsite() {
 						document.getElementById("body").contentEditable = "true";
  document.getElementById("edit").style.color = "red";
 						document.getElementById("edit").innerHTML = "REFRESH TO TURN OFF EDIT MODE!!!";
-						alert("Edit Mode Is Now On!")
+						alert("Edit Mode Is Now On!");
 }
 
 function light() {

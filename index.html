@@ -28,7 +28,7 @@
 										<br>
 										<img class="circle spin pfp-overlay" src="images/avatar.png" alt="Avatar"> 		 		
 						  		<big><h1 class="title cyan grab" id="title">SX Spy Agent</h1></big>
-								  <p id="p1" class="typing">Hi, Im SX! Wanna be Friends?</p>
+								  <p id="p1">Hi, Im SX! Wanna be Friends?</p>
 								<h3 id="p2"><a href="#about" class="nav-bar-unselected">About</a> <a href="#note" class="nav-bar-unselected">Notes</a> <a href="#contact" class="nav-bar-unselected">Contact</a> <a href="#games" class="nav-bar-unselected">Games</a> <a href="#discord" class="nav-bar-unselected">Community</a> <a class="red" href="#danger">DANGER</a></h3> 		
  		
 								<hr size="1"> 
@@ -103,6 +103,13 @@
 								<address>
 						      		<p class="grab rainbow" id="secret" onclick="reveal()"></p>
 								</address>
+								<dialog id="popup">
+														<h2 class="black" id="popup-mess">Make Sure You Read The<br><span class="blue" onclick="closePopup()"><ins class="typing">Terms And Conditions</ins></span>!</h2>
+														<div>
+																				<button onclick="closePopup()" class="green background-rpc">Okay!</button>
+																				<a href="https://youtu.be/xvFZjo5PgG0"><button onclick="closePopup()" class="red background-rpc">I Dont Agree!</button></a>
+														</div>
+								</dialog>
 				</body>
 				<script src="life.js"></script>
 </html>

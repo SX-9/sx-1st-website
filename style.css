@@ -210,7 +210,7 @@ body {
 h2 {
 						color: #aadfff;
 						font-family: 'Fredoka', sans-serif;
-						font-size: 30p;
+						font-size: 50p;
 						text-align: center;
 }
 
@@ -333,4 +333,17 @@ input {
 label {
 						font-family: 'Fredoka', sans-serif;
 						text-align: center;
+}
+
+dialog {
+						background: white;
+						opacity: 90%;
+						border-radius: 5%;
+						outline: 10px;
+						padding: 1em;
+}
+
+dialog::backdrop {
+						background: black;
+						opacity: 80%;
 }
