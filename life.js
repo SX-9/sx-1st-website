@@ -8,9 +8,26 @@ var colors = ['red', 'lime', 'cyan', 'yellow'];
 var random = colors[Math.floor(Math.random()*colors.length)];
 var mess = "ReadTheConsole";
 var formEmail = document.getElementById("formEmail").value;
+var typingElements = document.getElementsByClassName("typing");
 
 document.querySelector("h1.title").addEventListener("mouseover", glitch);
 document.querySelector("h1.title").addEventListener("mouseout", unglitch);
+
+for (var typingElement of typingElements) {
+    var originalText = typingElement.innerText;
+
+    typingElement.innerHTML = "";
+
+    let nextCharIndex = 0;
+    var interval = setInterval(() => {
+        if (nextCharIndex >= originalText.length - 1) {
+            clearInterval(interval);
+        }
+
+        typingElement.innerHTML += originalText[nextCharIndex];
+        nextCharIndex++;
+    }, 75);
+} 
 
 function formSubmit() {
       if(formEmail.length < 0) {
@@ -67,7 +84,7 @@ function lightModeToggle() {
 						document.getElementById("formName").style.backgroundColor = "black";
 						document.getElementById("formEmail").style.backgroundColor = "black";
 						document.getElementById("formMess").style.backgroundColor = "black";	
-						document.body.style.backgroundImage = "url('white.jpg')";
+						document.body.style.backgroundImage = "url('images/white.jpg')";
 }
 
 function unglitch() {
