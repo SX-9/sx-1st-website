@@ -10,7 +10,8 @@ var mess = "ReadTheConsole";
 var formEmail = document.getElementById("formEmail").value;
 var typingElements = document.getElementsByClassName("typing");
 
-window.addEventListener('load', () => { 
+window.addEventListener('load', () => {
+      setTimeout(hideLoader, 5000)
 						registerSW();
 });
 
@@ -29,7 +30,7 @@ document.querySelector("h1.title").addEventListener("mouseout", unglitch);
 for (var typingElement of typingElements) {
     var originalText = typingElement.innerText;
 
-    typingElement.innerHTML = "";
+    typingElement.innerHTML = " ";
 
     let nextCharIndex = 0;
     var interval = setInterval(() => {
@@ -40,9 +41,12 @@ for (var typingElement of typingElements) {
         typingElement.innerHTML += originalText[nextCharIndex];
         nextCharIndex++;
     }, 75);
-} 
+}
 
-document.getElementById("popup").showModal();
+function hideLoader() {
+						document.getElementById("popup").showModal();
+						document.getElementById("loader").remove();
+}
 
 function closePopup() {
 						document.getElementById("popup").close();

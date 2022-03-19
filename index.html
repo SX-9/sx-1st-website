@@ -20,11 +20,17 @@
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@85.2,532&display=swap" rel="stylesheet">
-          <link rel="manifest" href="pwa/manifest.webmanifest">
+          <link rel="manifest" href="pwa/manifest.json">
 								  <title>SX's Website</title>
 								  <link rel="icon" href="images/avatar.png">
 				</head>
 				<body id="body" class="fade">
+										<div class="loader" id="loader">
+																<svg viewBox="25 25 50 50">
+																						<circle cx="50" cy="50" r="20"></circle>
+																</svg>
+																<h2 class="typing cyan">Loading...</h2>
+										</div>
 										<img class="banner" src="images/banner.png" alt="banner">
 										<br>
 										<img class="circle spin pfp-overlay" src="images/avatar.png" alt="Avatar"> 		 		
@@ -105,7 +111,7 @@
 						      		<p class="grab rainbow" id="secret" onclick="reveal()"></p>
 								</address>
 								<dialog id="popup">
-														<h2 class="black" id="popup-mess">Make Sure You Read The<br><span class="blue" onclick="closePopup()"><ins class="typing">Terms And Conditions</ins></span>!</h2>
+														<h2 class="black" id="popup-mess">Make Sure You Read The<br><span class="blue" onclick="closePopup()"><ins>Terms And Conditions</ins></span>!</h2>
 														<div>
 																				<button onclick="closePopup()" class="green background-rpc">Okay!</button>
 																				<a href="https://youtu.be/xvFZjo5PgG0"><button onclick="closePopup()" class="red background-rpc">I Dont Agree!</button></a>
