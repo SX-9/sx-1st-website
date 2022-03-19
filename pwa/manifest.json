@@ -1,0 +1,20 @@
+{ 
+						"name": "SX's Website", 
+						"short_name": "SX Web App", 
+						"start_url": ".", 
+						"display": "standalone", 
+						"background_color": "#00e1ff", 
+						"description": "A Web App", 
+						"icons": [ 
+						{ 
+												"src": "images/avatar.png", 
+												"sizes": "512lx512",
+												"type": "image/png" 
+						}, 
+						{ 
+												"src": "images/avatar.png", 
+												"sizes": "192x192", 
+												"type": "image/png" 
+						} 
+			]
+}
