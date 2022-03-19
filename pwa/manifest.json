@@ -1,6 +1,7 @@
 { 
 						"name": "SX's Website", 
-						"short_name": "SX Web App",
+						"short_name": "SX Web App", 
+						"start_url": "./index.html", 
 						"display": "standalone", 
 						"background_color": "#00e1ff", 
 						"description": "A Web App", 
