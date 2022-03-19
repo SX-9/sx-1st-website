@@ -10,6 +10,19 @@ var mess = "ReadTheConsole";
 var formEmail = document.getElementById("formEmail").value;
 var typingElements = document.getElementsByClassName("typing");
 
+window.addEventListener('load', () => { 
+						registerSW();
+});
+
+async function registerSW() { 
+						if ('serviceWorker' in navigator) { 
+												try { 
+																		await navigator.serviceWorker.register('./sw.js'); 
+												} catch (e) { 
+																		console.log(`Error: SW registration failed`); 
+												} 
+}}
+
 document.querySelector("h1.title").addEventListener("mouseover", glitch);
 document.querySelector("h1.title").addEventListener("mouseout", unglitch);
 
