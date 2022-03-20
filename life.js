@@ -24,6 +24,10 @@ async function registerSW() {
 												} 
 }}
 
+function punnish() {
+						document.getElementById("punnish").href = "https://youtu.be/Ux0YNqhaw0I"
+}
+
 document.querySelector("h1.title").addEventListener("mouseover", glitch);
 document.querySelector("h1.title").addEventListener("mouseout", unglitch);
 
