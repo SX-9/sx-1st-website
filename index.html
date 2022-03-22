@@ -1,123 +1,126 @@
 <!--INDEX.HTML-->
 <!DOCTYPE html>
 <html prefix="og: https://ogp.me/ns#" lang="en">
-				<head>
-										<meta charset="UTF-8">
-										<meta name="viewport" content="width=device-width, initial-scale=1.0">
-										<meta property="og:title" content="SX's Website" />
-										<meta property="og:url" content="https://1st.sx9.repl.co/"/>
-										<meta property="og:image" content="images/embed.jpg"/>
-								  <meta property="og:description" content="Hi, Im SX! Wanna be Friends?"/>
-								  <meta name="theme-color" content="#00e1ff">
-								  <meta name="twitter:card" content="summary_large_image" />
-								  <meta name="twitter:site" content="@SX_Discord" />
-								  <meta name="twitter:creator" content="@SX_Discord" />
-								  <meta name="twitter:title" content="SX's Website" />
-								  <meta name="twitter:description" content="Hi, Im SX! Wanna be Friends?" />
-								  <meta name="twitter:image" content="images/embed.jpg" />
-          <meta name="keywords" content="sx spy agent">
-          <link rel="stylesheet" href="style.css">
-          <link rel="preconnect" href="https://fonts.googleapis.com">
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-          <link href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@85.2,532&display=swap" rel="stylesheet">
-          <link rel="manifest" href="pwa/manifest.json">
-								  <title>SX's Website</title>
-								  <link rel="icon" href="images/avatar.png">
-				</head>
-				<body id="body" class="fade">
-										<div class="loader" id="loader">
-																<svg viewBox="25 25 50 50">
-																						<circle cx="50" cy="50" r="20"></circle>
-																</svg>
-																<h2 class="typing cyan">Loading...</h2>
-																
-										</div>
-										<img class="banner" src="images/banner.png" alt="banner">
-										<br>
-										<img class="circle spin pfp-overlay" src="images/avatar.png" alt="Avatar"> 		 		
-						  		<big><h1 class="title cyan grab" id="title">SX Spy Agent</h1></big>
-								  <p id="p1">Hi, Im SX! Wanna be Friends?</p>
-								<h3 id="p2"><a href="#about" class="nav-bar-unselected">About</a> <a href="#note" class="nav-bar-unselected">Notes</a> <a href="#contact" class="nav-bar-unselected">Contact</a> <a href="#games" class="nav-bar-unselected">Games</a> <a href="#discord" class="nav-bar-unselected">Community</a> <a class="red" href="#danger">DANGER</a></h3> 		
- 		
-								<hr size="1"> 
-								<br>	
-								<details>
-														<summary class="rainbow">Socials And Connections</summary>
-														<br>
-														<div>
-														<a href="https://discord.gg/JRmpduCbkm">		 
-														<button class="blurple grab background-rpc">Discord</button>
-								</a>
-								<a href="https://twitter.com/SX_Discord">
-														<button class="blue grab background-rpc">Twitter</button>
-								</a>
-								<a href="https://youtube.com/channel/UC809q0q0Vt38DvJK7F35LAQ">		 
-														<button class="red grab background-rpc">YouTube</button>
-								</a>
-								<a href="https://github.com/SX-9">	
-														<button class="white grab background-rpc">Github</button>
-								</a>
-								</div>
-								</details>
-								<br>
-								<fieldset id="card">
-														<legend class="rainbow">About Me</legend>
-														<br>
-														<div class="box">
-																				<div class="coin"></div>
-														</div>
-														<h2 id="about">Who Am I?</h2>
-														<p id="p3">Im A <span class="blurple" title="SX-Spy-Agent#1377">Discord</span> User!<br>Learning <span class="yellow" title="This is my 1st website!">HTML</span> and <span class="green" title="I dont learn it most of the time...">NodeJS</span>!<br>I Like <span class="green" title="I dont play it yet.">Minecraft</span>, But I Play <span class="blue" title="My username will be sx9.is-a.dev">Gulper.io</span>!</p>
-														<h2 id="note">Note For SX!</h2>
-														<p class="red outline grab" contenteditable="true">Click Here And Type Something!</p>
-														<h2 id="contact">Contact Me!</h2>
-														<div><label id="label1">Name:</label><br>
-														<input id="formName" type="text" class="grab"></input><br><br>
-														<label id="label2">Email:</label><br>
-														<input id="formEmail" type="text" class="grab"></input><br><br>
-														<label id="label3">Message:</label><br>
-														<input id="formMess" class="mess grab" type="text"></input><br><br>
-														<a id="submit">
-																				<p id="errorMess"></p>
-																				<button onclick="formSubmit()" class="background-rpc blue grab">Submit</button>
-														</a></div>
-														</marquee>
-														<br>
-														<h2 id="games">Play Games!</h2>
-														<noscript>Sorry, your browser does not support JavaScript!</noscript>
-														<canvas id="gc" width="300" height="400"></canvas>
-														<p id="p4">Use The Arrow Keys To Control It!</p>
-														<hr size="1">
-														<p id="p5">Pick Rock, Paper, or Sicssor!</p>
-														<p id="rpc-answear" class="green">Pick And I Will Answear!</p>
-														<div>
-																				<button onclick="rpc()" class="white background-rpc grab">Rock</button>
-																				<button onclick="rpc()" class="white background-rpc grab">Paper</button>
-																				<button onclick="rpc()" class="white background-rpc grab">Sicssor</button>
-														</div>
-														<h2 id="discord">My Community Discord!</h2>
-														<iframe src="https://discord.com/widget?id=882598614411649065&theme=dork" width="350" height="500" allowtransparency="true" frameborder="1"></iframe>
-														<h2 id="danger" class="red">DANGER ZONE!</h2>
-														<div>
-																				<button onclick="edit()" class="white background-rpc grab" id="edit">Edit This Website</button>
-																				<button onclick="light()" class="white background-rpc grab" id="light">Activate Light Mode</button>
-														</div>
-														<br>
-								</fieldset>
-								<br>
-								<a href="https://invite.sx9.repl.co">
-														<img class="advert grab" src="images/advert.gif" alt="Advertisement">
-								</a>
-								<address>
-						      		<p class="grab rainbow" id="secret" onclick="reveal()"></p>
-								</address>
-								<dialog id="popup">
-														<h2 class="black" id="popup-mess">Make Sure You Read The<br><span class="blue" onclick="closePopup()"><ins>Terms And Conditions</ins></span>!</h2>
-														<div>
-																				<button onclick="closePopup()" class="green background-rpc">Okay!</button>
-																				<a id="punnish"><button onclick="punnish()" class="red background-rpc">I Dont Agree!</button></a>
-														</div>
-								</dialog>
-				</body>
-				<script src="life.js"></script>
+	<head>
+  	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="og:title" content="SX's Website" />
+	  <meta property="og:url" content="https://1st.sx9.repl.co/"/>
+	  <meta property="og:image" content="images/embed.jpg"/>
+		<meta property="og:description" content="Hi, Im SX! Wanna be Friends?"/>
+		<meta name="theme-color" content="#00e1ff">
+	  <meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@SX_Discord" />
+		<meta name="twitter:creator" content="@SX_Discord" />
+		<meta name="twitter:title" content="SX's Website" />
+		<meta name="twitter:description" content="Hi, Im SX! Wanna be Friends?" />
+		<meta name="twitter:image" content="images/embed.jpg" />
+    <meta name="keywords" content="sx spy agent">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@85.2,532&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+		<title>SX's Website</title>
+		<link rel="icon" href="images/avatar.png">
+	</head>
+	<body id="body" class="fade">
+		<div class="loader" id="loader">
+			<svg viewBox="25 25 50 50">
+				<circle cx="50" cy="50" r="20"></circle>
+			</svg>
+			<h2 class="typing cyan">Loading...</h2>
+		</div>
+		<img class="banner" src="images/banner.png" alt="banner">
+		<br>
+		<img class="circle spin pfp-overlay" src="images/avatar.png" alt="Avatar">
+		<big>
+			<h1 class="title cyan grab" id="title">SX Spy Agent</h1>
+		</big>
+		<p class="p">Hi, Im SX! Wanna be Friends?</p>
+		<h3 class="p"><a href="#about" class="nav-bar-unselected">About</a> <a href="#note" class="nav-bar-unselected">Notes</a> <a href="#contact" class="nav-bar-unselected">Contact</a> <a href="#games" class="nav-bar-unselected">Games</a> <a href="#discord" class="nav-bar-unselected">Community</a> <a class="red" href="#danger">DANGER</a></h3>
+		<hr size="1">
+		<br>
+		<details>
+			<summary class="rainbow">Socials And Connections</summary>
+			<br>
+			<div>
+				<a href="https://discord.gg/JRmpduCbkm">
+					<button class="blurple grab">Discord</button>
+				</a>
+				<a href="https://twitter.com/SX_Discord">
+					<button class="blue grab">Twitter</button>
+				</a>
+				<a href="https://youtube.com/channel/UC809q0q0Vt38DvJK7F35LAQ">
+					<button class="red grab">YouTube</button>
+				</a>
+				<a href="https://github.com/SX-9">
+					<button class="white grab">Github</button>
+				</a>
+			</div>
+		</details>
+		<br>
+		<fieldset id="card">
+			<legend class="rainbow">About Me</legend>
+			<br>
+			<div class="box">
+				<div class="coin"></div>
+			</div>
+		  	<h2 id="about">Who Am I?</h2>
+		  	<p class="p">Im A <span class="blurple" title="SX-Spy-Agent#1377">Discord</span> User!
+				<br>Learning <span class="yellow" title="This is my 1st website!">HTML</span> and <span class="green" title="I dont learn it most of the time...">NodeJS</span>!
+				<br>I Like <span class="green" title="I dont play it yet.">Minecraft</span>, But I Play <span class="blue" title="My username will be sx9.is-a.dev">Gulper.io</span>!
+		  	</p>
+	  		<h2 id="note">Note For SX!</h2>
+  			<p class="red outline grab" contenteditable="true">Click Here And Type Something!</p>
+			  <h2 id="contact">Contact Me!</h2>
+		  	<div>
+				  <label class="label">Name:</label><br>
+					<input id="formName" type="text" class="grab"></input><br><br>
+					<label class="label">Email:</label><br>
+					<input id="formEmail" class="grab" type="text"></input><br><br>
+					<label class="label">Message:</label><br>
+					<input id="formMess" class="mess grab" type="text"></input><br><br>
+					<a id="submit">
+						<button onclick="formSubmit()" class=" blue grab">Submit</button>
+					</a>
+				</div>
+				<br>
+				<h2 id="games">Play Games!</h2>
+				<noscript>Sorry, your browser does not support JavaScript!</noscript>
+				<canvas id="gc" width="300" height="400"></canvas>
+				<p class="p">Use The Arrow Keys To Control It!</p>
+				<hr size="1">
+				<p class="p">Pick Rock, Paper, or Sicssor!</p>
+				<p id="rpc-answear" class="green">Pick And I Will Answear!</p>
+				<div>
+					<button onclick="rpc()" class="white grab">Rock</button>
+					<button onclick="rpc()" class="white grab">Paper</button>
+					<button onclick="rpc()" class="white grab">Sicssor</button>
+				</div>
+				<h2 id="discord">My Community Discord!</h2>
+				<iframe src="https://discord.com/widget?id=882598614411649065&theme=dork" width="350" height="500" allowtransparency="true" frameborder="1"></iframe>
+				<h2 id="danger" class="red">DANGER ZONE!</h2>
+				<div>
+					<button onclick="edit()" class="white grab" id="edit">Edit This Website</button>
+					<button onclick="light()" class="white grab" id="light">Activate Light Mode</button>
+				</div>
+			  <br>
+			</fieldset>
+			<br>
+			<a href="https://invite.sx9.repl.co">
+				<img class="advert grab" src="images/advert.gif" alt="Advertisement">
+			</a>
+			<address>
+				<p class="grab rainbow" id="secret" onclick="reveal()"></p>
+			</address>
+			<dialog id="popup">
+				<h2 class="black" id="popup-mess">Make Sure You Read The<br><span class="blue" onclick="closePopup()"><ins>Terms And Conditions</ins></span>!</h2>
+				<div>
+					<button onclick="closePopup()" class="green">Okay!</button>
+					<a id="punnish"><button onclick="punnish()" class="red">I Dont Agree!</button></a>
+				</div>
+			</dialog>
+			<script src="life.js"></script>
+		</body>
 </html>

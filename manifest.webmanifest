@@ -1,0 +1,27 @@
+{
+  "background_color": "#000000",
+  "description": "Hi, Im SX! Wanna be Friends?",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "SX Web App",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "SX Web App",
+  "start_url": "/",
+  "theme_color": "#00e1ff",
+  "categories": [],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "images/avatar.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "images/embed.jpg",
+      "type": "image/jpeg",
+      "sizes": "615x137"
+    }
+  ],
+  "shortcuts": []
+}
