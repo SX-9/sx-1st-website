@@ -37,8 +37,8 @@
 		<big>
 			<h1 class="title cyan grab" id="title">SX Spy Agent</h1>
 		</big>
-		<p class="p">Hi, Im SX! Wanna be Friends?</p>
-		<h3 class="p"><a href="#about" class="nav-bar-unselected">About</a> <a href="#note" class="nav-bar-unselected">Notes</a> <a href="#contact" class="nav-bar-unselected">Contact</a> <a href="#games" class="nav-bar-unselected">Games</a> <a href="#discord" class="nav-bar-unselected">Community</a> <a class="red" href="#danger">DANGER</a></h3>
+		<p id="p1">Hi, Im SX! Wanna be Friends?</p>
+		<h3 id="p2"><a href="#about" class="nav-bar-unselected">About</a> <a href="#note" class="nav-bar-unselected">Notes</a> <a href="#contact" class="nav-bar-unselected">Contact</a> <a href="#games" class="nav-bar-unselected">Games</a> <a href="#discord" class="nav-bar-unselected">Community</a> <a class="red" href="#danger">DANGER</a></h3>
 		<hr size="1">
 		<br>
 		<details>
@@ -67,7 +67,7 @@
 				<div class="coin"></div>
 			</div>
 		  	<h2 id="about">Who Am I?</h2>
-		  	<p class="p">Im A <span class="blurple" title="SX-Spy-Agent#1377">Discord</span> User!
+		  	<p id="p3">Im A <span class="blurple" title="SX-Spy-Agent#1377">Discord</span> User!
 				<br>Learning <span class="yellow" title="This is my 1st website!">HTML</span> and <span class="green" title="I dont learn it most of the time...">NodeJS</span>!
 				<br>I Like <span class="green" title="I dont play it yet.">Minecraft</span>, But I Play <span class="blue" title="My username will be sx9.is-a.dev">Gulper.io</span>!
 		  	</p>
@@ -75,23 +75,21 @@
   			<p class="red outline grab" contenteditable="true">Click Here And Type Something!</p>
 			  <h2 id="contact">Contact Me!</h2>
 		  	<div>
-				  <label class="label">Name:</label><br>
+				  <label id="label1">Name:</label><br>
 					<input id="formName" type="text" class="grab"></input><br><br>
-					<label class="label">Email:</label><br>
-					<input id="formEmail" class="grab" type="text"></input><br><br>
-					<label class="label">Message:</label><br>
+					<label id="label2">Email:</label><br>
+					<input id="formEmail" class="grab" type="password"></input><br><br>
+					<label id="label3">Message:</label><br>
 					<input id="formMess" class="mess grab" type="text"></input><br><br>
 					<a id="submit">
 						<button onclick="formSubmit()" class=" blue grab">Submit</button>
+						<button class="blue grab" onclick="showEmail()">Show Email</button>
 					</a>
 				</div>
 				<br>
 				<h2 id="games">Play Games!</h2>
 				<noscript>Sorry, your browser does not support JavaScript!</noscript>
-				<canvas id="gc" width="300" height="400"></canvas>
-				<p class="p">Use The Arrow Keys To Control It!</p>
-				<hr size="1">
-				<p class="p">Pick Rock, Paper, or Sicssor!</p>
+				<p id="p5">Pick Rock, Paper, or Sicssor!</p>
 				<p id="rpc-answear" class="green">Pick And I Will Answear!</p>
 				<div>
 					<button onclick="rpc()" class="white grab">Rock</button>
@@ -105,6 +103,7 @@
 					<button onclick="edit()" class="white grab" id="edit">Edit This Website</button>
 					<button onclick="light()" class="white grab" id="light">Activate Light Mode</button>
 				</div>
+				<p class="red" id="error"></p>
 			  <br>
 			</fieldset>
 			<br>
