@@ -66,23 +66,6 @@ function destroy() {
 	document.getElementById("body").style.cursor = "wait";
 }
 
-function edit() {
-	document.getElementById("edit").innerHTML = "Please Wait For 3s...";
-	setTimeout(editWebsite, 3000)
-}
-
-function editWebsite() {
-	document.body.contentEditable = "true";
-  document.getElementById("edit").style.color = "red";
-	document.getElementById("edit").innerHTML = "REFRESH TO TURN OFF EDIT MODE!!!";
-	alert("Edit Mode Is Now On!");
-}
-
-function light() {
-	document.getElementById("error").innerHTML = "This Feature Has Been Removed<br>Due To Some Bugs";
-  document.getElementById("light").remove();
-}
-
 function unglitch() {
 	document.getElementById("title").style.color = "cyan";
 }
