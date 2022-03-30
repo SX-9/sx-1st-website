@@ -68,19 +68,19 @@
 }
 
 .red {
-	color: #ff2a4a;
+  color: #e61952;
+}
+
+.green {
+  color: #53dd6c;
 }
 
 .blue {
-	color: #408cff;
+  color: #6b7fd7;
 }
 
 .blurple {
 	color: #6666ff;
-}
-
-.green {
-	color: #51ff2a;
 }
 
 .cyan {
@@ -123,6 +123,7 @@
   justify-content: center;
   align-items: center;
   cursor: wait;
+  text-shadow:11px 11px 30px #fff;
 }
 
 @keyframes spin {
@@ -336,8 +337,8 @@ label {
 }
 
 dialog {
+  font-size: 0.7em;
 	background: white;
-	opacity: 90%;
 	border-radius: 5%;
   outline: 10px;
 	padding: 1em;

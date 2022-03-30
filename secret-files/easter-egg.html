@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SX-Web-Server</title>
+    <style>
+      body {
+        background-color: black;
+      }
+
+      div {
+        position: fixed;
+        font-style: italic;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        color: white;
+        font-family: monospace;
+        font-size: 5em
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 class="typing">🌎 Hello World!</h1>
+    </div>
+    <script type="text/javascript">
+      var typingElements = document.getElementsByClassName("typing");
+      for (var typingElement of typingElements) {
+      var originalText = typingElement.innerText;
+
+      typingElement.innerHTML = "";
+
+      let nextCharIndex = 0;
+        var interval = setInterval(() => {
+            if (nextCharIndex >= originalText.length - 1) {
+              clearInterval(interval);
+            }
+        typingElement.innerHTML += originalText[nextCharIndex];
+        nextCharIndex++;
+        }, 75);
+      }
+    </script>
+  </body>
+</html>
