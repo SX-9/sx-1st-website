@@ -16,11 +16,6 @@
       "src": "images/avatar.png",
       "type": "image/png",
       "sizes": "128x128"
-    },
-    {
-      "src": "images/embed.jpg",
-      "type": "image/jpeg",
-      "sizes": "615x137"
     }
   ],
   "shortcuts": []
