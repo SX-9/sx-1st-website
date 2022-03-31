@@ -31,6 +31,10 @@
 	border-radius: 50%;
 }
 
+.grab {
+  cursor: url("images/cursor.cur"), default;
+}
+
 .dc {
   background-color: #6666ff;
 }
@@ -119,6 +123,7 @@
   justify-content: center;
   align-items: center;
   text-shadow:11px 11px 30px #fff;
+  cursor: url("images/cursor.cur"), default;
 }
 
 @keyframes spin {
@@ -199,7 +204,7 @@ body {
   background-image: linear-gradient(330deg, #000 20%, #00e1ff 50%, #000 20%);
 	animation-name: fade-in;
 	animation-duration: 3s;
-  cursor: url("cursor.cur");
+  cursor: url("images/cursor.cur"), default;
 }
 
 h2 {
@@ -241,10 +246,6 @@ div {
 	color: #ffffff;
 	text-align: center;
   font-size: 1rem;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  cursor: url("cursor.cur");
 }
 
 h1 {
@@ -297,6 +298,7 @@ button::before {
 }
 
 button:hover {
+  cursor: url("images/cursor.cur"), default;
   color: #161616;
 }
 
