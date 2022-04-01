@@ -19,6 +19,7 @@
 
 .discord {
   width: 20rem;
+  cursor: url("images/cursor.cur"), default;
 }
 
 .mess {
@@ -389,4 +390,8 @@ circle {
 
 progress {
   width: 7.5rem;
+}
+
+a {
+  cursor: url("images/cursor.cur"), default;
 }
