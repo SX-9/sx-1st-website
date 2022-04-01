@@ -350,6 +350,7 @@ dialog {
 dialog::backdrop {
 	background: black;
   opacity: 80%;
+  cursor: url("images/cursor.cur"), default;
 }
 
 svg {
