@@ -337,6 +337,7 @@ input {
 label {
   font-family: 'Raleway', sans-serif;
   text-align: center;
+  cursor: url("images/cursor.cur"), default;
 }
 
 dialog {
