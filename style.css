@@ -111,6 +111,10 @@
   border: 2px solid cyan;
 }
 
+.small-screen {
+  display: none;
+}
+
 .loader {
   position: fixed;
   font-style: italic;
@@ -396,4 +400,20 @@ progress {
 
 a {
   cursor: url("images/cursor.cur"), default;
+}
+
+@media only screen and (max-width: 372px) {
+  #body {
+    display: none;
+  }
+  .small-screen {
+    display: block;
+    text-align: center;
+  }
+  body {
+    background-color: #363940;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("images/pfp.jpg");
+  }
 }

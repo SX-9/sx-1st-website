@@ -21,7 +21,12 @@
 		<title>SX's Website</title>
 		<link rel="icon" href="images/avatar.png">
 	</head>
-	<body id="body" class="fade">
+	<body>
+		<div class="small-screen">
+			<h2 class="red">Oh No!</h2>
+			<p>Sorry Your <span class="yellow">Screen Is Too Small</span> To View This Website!</p>
+		</div>
+		<div id="body" class="fade">
 		<div class="loader" id="loader">
 			<svg viewBox="25 25 50 50">
 				<circle cx="50" cy="50" r="20"></circle>
@@ -118,6 +123,7 @@
 					<a id="punnish"><button onclick="punnish()" class="red">I Dont Agree!</button></a>
 				</div>
 			</dialog>
-			<script src="life.js"></script>
+		</div>
+		<script src="life.js"></script>
 		</body>
 </html>
