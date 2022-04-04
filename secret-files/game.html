@@ -18,17 +18,23 @@
         cursor: pointer;
       }
 
-      div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
       h1, p {
         color: white;
         font-family: sans-serif;
         font-weight: 1;
         cursor: pointer;
+      }
+
+      div.buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      div.gap {
+        width:0.5em;
+        height:auto;
+        display:inline-block;
       }
 
       span#label {
@@ -51,19 +57,48 @@
       button#scoreReset {
         color: yellow;
       }
+
+      button#powerUp {
+        display: none;
+        color: purple;
+      }
     </style>
   </head>
   <body>
     <h1>A <span id="label">Counting</span> Game</h1>
-    <div>
+    <div class="buttons">
       <button id="scoreAdd" onclick="add()">+1</button>
+      <div class="gap"></div>
       <button id="scoreRemove" onclick="remove()">-1</button>
+      <div class="gap"></div>
       <button id="scoreReset" onclick="reset()">Reset</button>
     </div>
     <p>Score: <span id="score">0</span></p>
-    <p><i>This Website Has Anti-Cheat</i></p>
+    <p id="reminder"><i>This Website Has Anti-Cheat</i></p>
+    <div class="buttons">
+      <button id="powerUp" onclick="add2x()">2x Boost (One Time Use)</button>
+    </div>
     <script type="text/javascript">
       var score = document.getElementById('score');
+
+      window.addEventListener('load', () => {
+        setTimeout(hideReminder, 5000)
+        setTimeout(showBoost, 5000)
+      });
+
+      function hideReminder() {
+        document.getElementById('reminder').remove();
+      };
+
+      function showBoost() {
+        document.getElementById('powerUp').style.display = "block";
+      };
+
+      function add2x() {
+        score.innerText = (parseInt(score.innerText) * 2).toString();
+        document.getElementById('powerUp').remove();
+        console.log("2x Score");
+      }
 
       function add() {
         score.innerText = (parseInt(score.innerText) + 1).toString();
