@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>A Bad Game</title>
+    <style media="screen">
+      body {
+        background-color: black;
+        text-align: center;
+      }
+
+      button {
+        border-radius: 10%;
+        outline: none;
+        padding: 0.5em;
+        background-color: #adadad;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1, p {
+        color: white;
+        font-family: sans-serif;
+      }
+
+      span#label {
+        color: red;
+      }
+
+      span#score {
+        color: blue;
+      }
+
+      button#scoreAdd {
+        color: green;
+      }
+
+      button#scoreRemove {
+        color: red;
+      }
+
+      button#scoreReset {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>A <span id="label">Bad</span> Game</h1>
+    <div>
+      <button id="scoreAdd" onclick="add()">+1</button>
+      <button id="scoreRemove" onclick="remove()">-1</button>
+      <button id="scoreReset" onclick="reset()">Reset</button>
+    </div>
+    <p>Score: <span id="score">0</span></p>
+    <script type="text/javascript">
+      var score = document.getElementById('score');
+
+      function add() {
+        score.innerText = (parseInt(score.innerText) + 1).toString()
+      }
+
+      function remove() {
+        score.innerText = (parseInt(score.innerText) - 1).toString()
+      }
+
+      function reset() {
+        score.innerText = "0";
+      }
+    </script>
+  </body>
+</html>

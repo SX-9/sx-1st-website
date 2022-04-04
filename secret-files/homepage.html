@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to SX!</title>
+    <style media="screen">
+      body {
+        background-color: black;
+        text-align: center;
+      }
+
+      input {
+        background-color: white;
+        font-family: sans-serif;
+        color: black;
+        border: none;
+        outline: none;
+        padding: 0.5em;
+        text-align: center;
+        border-radius: 10%;
+      }
+
+      span {
+        color: lightblue;
+        font-weight: bold;
+      }
+
+      h1, p {
+        color: white;
+        font-family: sans-serif;
+      }
+
+      button {
+        border: none;
+        outline: none;
+        padding: 0.5em;
+        border-radius: 10%;
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to <br><span>SX Web Explore</span>!</h1>
+    <p><strong>Website URL:</strong></p>
+    <input type="text" value="sx9.is-a.dev" id="url"></input>
+    <button onclick="visit()">Enter!</button>
+    <p><i>https:// Is Not Required!</i></p>
+    <script type="text/javascript">
+      function visit() {
+        window.open("https://" + document.getElementById('url').value)
+      }
+    </script>
+  </body>
+</html>
