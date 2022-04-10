@@ -60,6 +60,7 @@
         height: 2.5em;
         width: 2.5em;
         font-size: 2em;
+        font-weight: bolder;
         cursor: pointer;
       }
 
@@ -88,9 +89,7 @@
         <button onclick="add(7)">7</buttons>
         <button onclick="add(8)">8</buttons>
         <button onclick="add(9)">9</buttons>
-        <a href="https://sx9.is-a.dev">
-          <button class="blue">Info</button>
-        </a>
+        <button class="blue" onclick="dot()">.</buttons>
         <button onclick="add(0)">0</buttons>
         <button class="green" onclick="calc()">=</button>
       </div>
@@ -111,6 +110,10 @@
         if(event.keyCode == 187) {
           calc()
         }
+      }
+
+      function dot() {
+        document.getElementById('output').value += ".";
       }
 
       function add(x) {
