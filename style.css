@@ -19,7 +19,7 @@
 
 .discord {
   width: 20rem;
-  cursor: url("images/cursor.cur"), default;
+  cursor: pointer;
 }
 
 .mess {
@@ -33,7 +33,7 @@
 }
 
 .grab {
-  cursor: url("images/cursor.cur"), default;
+  cursor: pointer;
 }
 
 .dc {
@@ -128,7 +128,7 @@
   justify-content: center;
   align-items: center;
   text-shadow:11px 11px 30px #fff;
-  cursor: url("images/cursor.cur"), default;
+  cursor: wait;
 }
 
 @keyframes spin {
@@ -209,7 +209,6 @@ body {
   background-image: linear-gradient(330deg, #000 20%, #00e1ff 50%, #000 20%);
 	animation-name: fade-in;
 	animation-duration: 3s;
-  cursor: url("images/cursor.cur"), default;
 }
 
 h2 {
@@ -303,7 +302,7 @@ button::before {
 }
 
 button:hover {
-  cursor: url("images/cursor.cur"), default;
+  cursor: pointer;
   color: #161616;
 }
 
@@ -341,7 +340,7 @@ input {
 label {
   font-family: 'Raleway', sans-serif;
   text-align: center;
-  cursor: url("images/cursor.cur"), default;
+  cursor: pointer;
 }
 
 dialog {
@@ -355,7 +354,6 @@ dialog {
 dialog::backdrop {
 	background: black;
   opacity: 80%;
-  cursor: url("images/cursor.cur"), default;
 }
 
 svg {
@@ -399,7 +397,7 @@ progress {
 }
 
 a {
-  cursor: url("images/cursor.cur"), default;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 372px) {

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        background-color: black;
+      }
+
+      p#output {
+        width: 20em;
+        background-color: white;
+        color: black;
+      }
+
+      h1, p {
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+      }
+
+      div.center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      div.buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      div.numbers {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto;
+      }
+
+      div.operators {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+      }
+
+      button.yellow {
+        background-color: yellow;
+      }
+
+      button.blue {
+        background-color: lightblue;
+      }
+
+      button.green {
+        background-color: lightgreen;
+      }
+
+      button {
+        height: 2.5em;
+        width: 2.5em;
+        font-size: 2em;
+        cursor: pointer;
+      }
+
+      input {
+        text-align: center;
+        font-weight: bolder;
+        font-size: 1.5em;
+      }
+    </style>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <p>Click The Buttons Below To Calculate</p>
+    <div class="center">
+      <input type="text" id="output" contenteditable="false">
+    </div>
+    <div class="buttons">
+      <div class="numbers">
+        <button onclick="add(1)">1</buttons>
+        <button onclick="add(2)">2</buttons>
+        <button onclick="add(3)">3</buttons>
+        <button onclick="add(4)">4</buttons>
+        <button onclick="add(5)">5</buttons>
+        <button onclick="add(6)">6</buttons>
+        <button onclick="add(7)">7</buttons>
+        <button onclick="add(8)">8</buttons>
+        <button onclick="add(9)">9</buttons>
+        <a href="https://sx9.is-a.dev">
+          <button class="blue">Info</button>
+        </a>
+        <button onclick="add(0)">0</buttons>
+        <button class="green" onclick="calc()">=</button>
+      </div>
+      <div class="gap"></div>
+      <div class="operators">
+        <button class="yellow" onclick="plus()">+</buttons>
+        <button class="yellow" onclick="minus()">-</buttons>
+        <button class="yellow" onclick="multiply()">*</buttons>
+        <button class="yellow" onclick="devide()">/</buttons>
+      </div>
+    </div>
+    <script>
+      document.onkeydown = function(e) {
+        if(event.keyCode == 13) {
+          calc()
+        }
+
+        if(event.keyCode == 187) {
+          calc()
+        }
+      }
+
+      function add(x) {
+        document.getElementById('output').value += x;
+      }
+
+      function plus() {
+        document.getElementById('output').value += "+";
+      }
+
+      function minus() {
+        document.getElementById('output').value += "-";
+      }
+
+      function multiply() {
+        document.getElementById('output').value += "*";
+      }
+
+      function devide() {
+        document.getElementById('output').value += "/";
+      }
+
+      function calc() {
+        document.getElementById("output").value = eval(document.getElementById("output").value);
+      }
+    </script>
+  </body>
+</html>
