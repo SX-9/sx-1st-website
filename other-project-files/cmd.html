@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+      body {
+        background-color: black;
+        font-family: sans-serif;
+      }
+
+      h1, h2, p {
+        color: white;
+        text-align: center;
+      }
+
+      div.center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <title>Command Prompt</title>
+  </head>
+  <body>
+    <h1>Command Prompt</h1>
+    <p>Type A Command To Get Started!</p>
+    <div class="center">
+      <input type="text" id="cmd" value="!help">
+      <button onclick="run()">Run</button>
+    </div>
+    <h2>Console:<br><span id="console">Waiting For User Input...</span></h2>
+    <script type="text/javascript">
+      document.onkeydown = function(e) {
+        if(event.keyCode == 13) {
+          run()
+        }
+      }
+
+      function run() {
+        var input = document.getElementById("cmd").value;
+        var output = document.getElementById("console");
+        console.log("Command " + input + " Has Been Executed!");
+
+        if (input === "!help") {
+          output.innerText = "Commands: !help and !add-cmd"
+        }
+
+        if (input === "!add-cmd") {
+          window.open("https://github.com/SX-9/sx-1st-website/tree/main/other-project-files/cmd.html")
+          output.innerText = "Opening Github..."
+        }
+      }
+    </script>
+  </body>
+</html>
