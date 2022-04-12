@@ -7,14 +7,31 @@
         text-align: center;
         background-color: black;
       }
-      
+
       h1 {
         color: white;
         font-family: monospace;
+        font-size: 5rem
+      }
+
+      span {
+        color: #c86868;
+        text-decoration: underline;
+      }
+
+      a {
+        color: #5bcfe4;
       }
     </style>
   </head>
   <body>
-    <h1>Error 404 Page Not Found</h1>
+    <h1>Error 404 Page Not Found<br>Press <span>B</span> To <a href="index.html">Return To Home Page</a>!</h1>
+    <script type="text/javascript">
+    document.onkeydown = function(e) {
+      if(event.keyCode == 66) {
+        window.open("index.html");
+      }
+    }
+    </script>
   </body>
 </html>
