@@ -73,7 +73,7 @@
 }
 
 .green {
-  color: #53dd6c;
+  color: #32b54a;
 }
 
 .blue {
@@ -231,6 +231,7 @@ fieldset {
 	width: 350px;
 	margin: auto;
 	border-radius: 0%;
+  box-shadow: 0 0 20px 0 rgb(255, 255, 255), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 summary {
@@ -255,7 +256,7 @@ div {
 h1 {
   text-align: center;
   font-family: 'Raleway', sans-serif;
-  font-color: cyan;
+  color: cyan;
 }
 
 h1:hover {
@@ -274,7 +275,7 @@ button {
   padding: 0.5em 1em  ;
   outline: none;
   border: none;
-  background: #606060;
+  background: #b6b6b6;
   overflow: hidden;
   transition: color 0.4s ease-in-out;
   margin: auto;
@@ -295,7 +296,7 @@ button::before {
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  background-color: #b6b6b6;
+  background-color: #fff;
   transform-origin: center;
   transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
   transition: transform 0.45s ease-in-out;

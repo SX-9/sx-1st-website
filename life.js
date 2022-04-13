@@ -2,14 +2,15 @@
 var welcome = "Hi, Welcome to SX's 1st Website!";
 var suprise = "R̶̲̋ė̴͙ă̸̼d̸̮͝T̴͍͗ĥ̵̩ē̶͓C̷͈͝o̵͙̓ṉ̷͠s̵̫̈́ô̴̰ḻ̸͐e̷̛̖";
 var link = "1st.sx9.repl.co";
-var answear = ['Rock', 'Paper', 'Scissor'];
-var picker = answear[Math.floor(Math.random()*answear.length)];
 var colors = ['red', 'lime', 'cyan', 'yellow'];
 var random = colors[Math.floor(Math.random()*colors.length)];
 var mess = "ReadTheConsole";
 var formEmail = document.getElementById("formEmail").value;
 var typingElements = document.getElementsByClassName("typing");
 var data = document.cookie
+var discord = "other-project-files/discord.html";
+var calc = "other-project-files/calc.html";
+var cmd = "other-project-files/cmd.html";
 
 data = suprise
 
@@ -78,13 +79,13 @@ function reveal() {
 	document.getElementById('secret').innerHTML = mess
 }
 
-function rpc() {
-	document.getElementById("rpc-answear").innerHTML = "I Pick " + picker + "! <br> Refresh To Play Again!";
-}
-
 function share() {
   navigator.clipboard.writeText("1st.sx9.replco");
 	alert("Copied The Website Link!");
+}
+
+function opeTab(link) {
+  window.open(link);
 }
 
 console.log('System: ' + welcome);
