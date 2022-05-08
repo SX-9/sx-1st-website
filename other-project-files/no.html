@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dont Visit This Website</title>
+  <style>
+    body {
+      background-color: black;
+      font-family: sans-serif;
+      text-align: center;
+      color: white;
+    }
+    button {
+      color: red;
+      font-weight: bold;
+      padding: 0.5em;
+      font-size: 2em;
+    }
+  </style>  
+</head>
+<body>
+  <h1>Dont Click The Button Below</h1>
+  <button onclick="execute()">Dont Click Me</button>
+  <script>
+    function execute() {
+      window.open("https://youtu.be/dQw4w9WgXcQ");
+      execute()
+    }
+  </script>
+</body>
+</html>
