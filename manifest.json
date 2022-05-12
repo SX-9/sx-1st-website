@@ -1,0 +1,59 @@
+{
+  "background_color": "#000000",
+  "description": "Hi, Im SX! Wanna be Friends?",
+  "display": "fullscreen",
+  "name": "SX Web App",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "SX Web App",
+  "start_url": "/other-project-files/homepage.html",
+  "theme_color": "#00e1ff",
+      "icons": [
+        {
+            "src": "icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+  "shortcuts": [
+    {
+      "name": "Cmd Prompt Simulator",
+      "short_name": "Cmd Prompt",
+      "description": "Open a web page",
+      "url": "/other-project-files/homepage.html"
+    },
+    {
+      "name": "Calculator",
+      "short_name": "Math",
+      "description": "Do some maths",
+      "url": "/other-project-files/calc.html"
+    },
+    {
+      "name": "Counting Game",
+      "short_name": "Counting",
+      "description": "One to infinity",
+      "url": "./other-project-files/game.html"
+    },
+    {
+      "name": "Clock",
+      "short_name": "Time",
+      "description": "See the time",
+      "url": "/other-project-files/clock.html"
+    }
+  ]
+}

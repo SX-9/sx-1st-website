@@ -401,7 +401,7 @@ a {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 372px) {
+@media only screen and (max-width: 23.25rem) {
   #body {
     display: none;
   }

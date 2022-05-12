@@ -92,3 +92,34 @@ console.log('System: ' + welcome);
 console.log('Warning: DO NOT RUN destroy()')
 
 document.getElementById("secret").innerHTML = suprise;
+
+document.querySelectorAll('img').loading = "lazy";
+
+document.getElementById('share').onclick = async () => {
+  if (navigator.canShare) {
+    navigator.share({
+      url: 'https://sx9.is-a.dev',
+      title: "SX's Website",
+      text: "Check out SX's Website!"
+    })
+  } else {
+    alert("Your Browser Doesn't Support This Feature!")
+  }
+}
+
+if ('IdleDetector' in window) {
+  async function runIdleDetection() {
+    const state = await IdleDetector.requestPermission();
+    console.log(state);
+    const idleDetector = new IdleDetector();
+    idleDetector.addEventListener('change', () => {
+      const { userState, screenState } = idleDetector;
+      if (userState === 'idle') {
+        alert('Anybody there?');
+      }
+    });
+    await idleDetector.start({
+      threshold: 120000,
+    });
+  }
+}
