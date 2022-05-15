@@ -6,7 +6,7 @@
   "orientation": "any",
   "scope": "/",
   "short_name": "SX Web App",
-  "start_url": "/other-project-files/homepage.html",
+  "start_url": "/",
   "theme_color": "#00e1ff",
       "icons": [
         {
@@ -31,12 +31,6 @@
         }
     ],
   "shortcuts": [
-    {
-      "name": "Cmd Prompt Simulator",
-      "short_name": "Cmd Prompt",
-      "description": "Open a web page",
-      "url": "/other-project-files/homepage.html"
-    },
     {
       "name": "Calculator",
       "short_name": "Math",
