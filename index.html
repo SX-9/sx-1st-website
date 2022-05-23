@@ -1,153 +1,35 @@
-<!--INDEX.HTML-->
 <!DOCTYPE html>
 <html prefix="og: https://ogp.me/ns#" lang="en">
 	<head>
-  	<meta charset="UTF-8">
+  	    <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta property="og:title" content="SX's Website"/>
-	  <meta property="og:url" content="https://1st.sx9.repl.co/"/>
+	    <meta property="og:url" content="https://1st.sx9.repl.co/"/>
 		<meta property="og:description" content="Hi, Im SX! Wanna be Friends?"/>
 		<meta name="theme-color" content="#00e1ff">
 		<meta name="twitter:site" content="@SX_Discord"/>
 		<meta name="twitter:creator" content="@SX_Discord"/>
 		<meta name="twitter:title" content="SX's Website"/>
 		<meta name="twitter:description" content="Hi, Im SX! Wanna be Friends?"/>
-    <meta name="keywords" content="sx spy agent">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    	<meta name="keywords" content="sx spy agent">
+   		<link rel="stylesheet" href="style.css">
+    	<link rel="preconnect" href="https://fonts.googleapis.com">
+    	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
 		<link rel="manifest" href="manifest.json">
 		<title>SX's Website</title>
 		<link rel="icon" href="images/avatar.png">
 	</head>
 	<body>
-		<div class="small-screen">
-			<h2 class="red">Oh No!</h2>
-			<p>Sorry Your <span class="yellow">Screen Is Too Small</span> To View This Website!</p>
-		</div>
-		<div id="body" class="fade">
-		<div class="loader" id="loader">
-			<svg viewBox="25 25 50 50">
-				<circle cx="50" cy="50" r="20"></circle>
-			</svg>
-			<h2 class="typing cyan">Loading...</h2>
-		</div>
-		<br>
-		<img class="banner" src="images/banner.gif" alt="banner">
-		<br>
-		<img class="circle spin pfp-overlay" src="images/avatar.png" alt="Avatar">
-		<h1 class="title cyan grab" id="title">SX Spy Agent</h1>
-		<p id="p1">Hi, Im SX! Wanna be Friends?</p>
-		<div>
-			<a href="https://discord.gg/JRmpduCbkm">
-	  		<button class="black dc grab">Discord</button>
-	  	</a>
-			<a href="https://twitter.com/SX_Discord">
-				<button class="black tw grab">Twitter</button>
-			</a>
-			<a href="https://youtube.com/channel/UC809q0q0Vt38DvJK7F35LAQ">
-				<button class="black yt grab">YouTube</button>
-			</a>
-			<a href="https://github.com/SX-9">
-				<button class="black git grab">Github</button>
-			</a>
-	  </div>
-		<br>
-		<fieldset id="card">
-			<legend class="rainbow">About Me Card</legend>
-			<br>
-			<div class="box">
-				<div class="coin"></div>
+		<div class="container">
+			<img src="images/avatar.png" alt="SX's Avatar">
+			<h1>SX Spy Agent</h1>
+			<p>Hi, Im SX! Wanna Code?</p>
+			<div>
+				<button id="discord">Discord</button>
+				<button id="github">GitHub</button>
+				<button id="twitter">Twitter</button>
 			</div>
-		  	<h2 id="about">Who Am I?</h2>
-		  	<p id="p3">Im A <span class="blurple" title="SX-Spy-Agent#1377">Discord</span> User!
-					<br>An <span class="orange" title="This is my 1st website!">HTML</span> Developer!
-				  <br>Learning <span class="green" title="I dont learn it most of the time...">NodeJS</span>!
-				  <br>I Like <span class="green" title="I dont play it yet.">Minecraft</span>!
-					<br>But I Play <span class="blue" title="My username will be SX-Gulper"><a href="https://gulper.io">gulper.io</a></span>!
-					<br>Please <a id="share" href="https://twitter.com/intent/tweet?url=https://sx9-1st.web.app&text=Check%20Out%20This%20Cool%20Website%20@SX_Discord%20Made!" class="blue">Share</a> This Website!
-		  	</p>
-				<h2 id="discord">My Community!</h2>
-        <a href="https://discord.gg/JRmpduCbkm">
-					<img class="discord" src="images/discord.png" frameborder="1">
-			  </a>
-				<h2>Programing Stats!</h2>
-				<p>
-          <span class="orange">HTML</span>: <progress value="75" max="100"></progress> <span class="green">7.5/10</span><br>
-					<span class="blue">CSS</span>: <progress value="47" max="100"></progress> <span class="yellow">4.7/10</span><br>
-					<span class="yellow">JS</span>: <progress value="36" max="100"></progress> <span class="red">3.6/10</span>
-				</p>
-				<h2 id="contact">Contact Me!</h2>
-		  	<div>
-				  <label id="label1">Name:</label><br>
-					<input id="formName" type="text" class="grab"></input><br><br>
-					<label id="label2">Email:</label><br>
-					<input id="formEmail" class="grab" type="password"></input><br><br>
-					<label id="label3">Message:</label><br>
-					<input id="formMess" class="mess grab" type="text"></input><br><br>
-					<a id="submit">
-						<button onclick="formSubmit()" class=" blue grab">Submit</button>
-						<button class="blue grab" onclick="showEmail()">Show Email</button>
-					</a>
-				</div>
-				<br>
-				<h2 id="danger" class="red">DANGER ZONE!</h2>
-				<div>
-          <a href="https://github.com/SX-9/sx-1st-website">
-            <button class="red">Get Source Code</button>
-					</a>
-				</div>
-				<p class="red" id="error"></p>
-			  <br>
-			</fieldset>
-			<br>
-			<fieldset>
-				<legend class="rainbow">My Projects</legend>
-				<br>
-				<div class="box">
-					<div class="coin"></div>
-				</div>
-				<h2>Remade Discord</h2>
-				<iframe src="other-project-files/discord.html" frameborder="0"></iframe>
-				<br>
-				<div>
-					<button class="grab" onclick="openTab(discord)">Open In New Tab</button>
-				</div>
-				<br>
-				<h2>Calculator</h2>
-				<iframe src="other-project-files/calc.html" frameborder="0"></iframe>
-				<br>
-				<div>
-					<button class="grab" onclick="openTab(calc)">Open In New Tab</button>
-				</div>
-				<br>
-				<h2>Cmd Promt</h2>
-				<iframe src="other-project-files/cmd.html" frameborder="0"></iframe>
-				<br>
-				<div>
-					<button class="grab" onclick="openTab(cmd)">Open In New Tab</button>
-				</div>
-				<br>
-				<hr size="1">
-				<br>
-				<div>
-					<a href="https://github.com/SX-9/sx-1st-website/tree/main/other-project-files">
-					  <button>View More</button>
-					</a>
-				</div>
-				<br>
-			</fieldset>
-			<address>
-				<p class="grab rainbow" id="secret" onclick="reveal()"></p>
-			</address>
-			<dialog id="popup">
-				<h2 class="black" id="popup-mess">Make Sure You Read The<br><span class="blue" onclick="closePopup()"><ins>Terms And Conditions</ins></span>!</h2>
-				<div>
-					<button onclick="closePopup()" class="green">Okay!</button>
-					<a id="punnish"><button onclick="punnish()" class="red">I Dont Agree!</button></a>
-				</div>
-			</dialog>
 		</div>
 		<script src="life.js"></script>
 		<script>
