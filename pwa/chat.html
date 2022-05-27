@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>X-Cord Chat</title>
+  <script defer src="http://chat-socket.sx9.repl.co/socket.io/socket.io.js"></script>
+  <script defer src="./script.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      color: white;
+      font-size: large;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: black;
+    }
+
+    h1, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    #message-container {
+      background-color: #404040;
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    #message-container p {
+      font-size: larger;
+      color: white;
+      padding: 5px;
+    }
+
+    #send-container {
+      position: fixed;
+      padding-top: 30px;
+      bottom: 0;
+      max-width: 1200px;
+      width: 80%;
+      display: flex;
+    }
+
+    #message-input {
+      height: 2em;
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>X-Cord Chat</h1>
+  <p>Say Something Nice Please!</p>
+  <div id="message-container">
+    <p>Welcome!</p>
+    <br>
+  </div>
+  <form id="send-container">
+    <input type="text" id="message-input" placeholder="Hello World!">
+    <button type="submit" id="send-button">Send!</button>
+  </form>
+</body>
+</html>
