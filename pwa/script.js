@@ -1,4 +1,4 @@
-const socket = io('http://chat-socket.sx9.repl.co')
+const socket = io('https://chat-socket.sx9.repl.co')
 const messageContainer = document.getElementById('message-container')
 const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message-input')
