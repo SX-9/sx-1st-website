@@ -34,10 +34,12 @@ img {
 
 h1 { color: var(--cyan); margin: 10px; }
 p { margin: 10px; }
+hr { transform: rotate(90deg); }
 
 button {
   border: none;
   border-radius: 5px;
+  background-color: #717171;
   color: #000;
   padding: 10px;
   text-align: center;
@@ -47,9 +49,15 @@ button {
   margin: 4px 2px;
   cursor: pointer;
 }
+
+button:hover { background-color: #7e7e7e; }
+button::before { content: "➤ "; color: white; }
+button:hover:before { color: #dcdcdc; }
 button#discord { background-color: #4f26b0; }
 button#discord:hover { background-color: #6c54a4; }
 button#github { background-color: #4a4a4a; }
 button#github:hover { background-color: #717171; }
 button#twitter { background-color: #1da1f2; }
-button#twitter:hover { background-color: #42acee; }
+button#twitter:hover { background-color: #6bbef1; }
+button#email { background-color: #d4ff00; }
+button#email:hover { background-color: #f9ff86; }
