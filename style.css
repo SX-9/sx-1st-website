@@ -13,7 +13,8 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
-div.container {
+
+div#container {
   position: fixed;
   top: 0;
   left: 0;
@@ -61,3 +62,11 @@ button#twitter { background-color: #1da1f2; }
 button#twitter:hover { background-color: #6bbef1; }
 button#email { background-color: #d4ff00; }
 button#email:hover { background-color: #f9ff86; }
+
+@media screen and (max-width: 580px) {
+  div#buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
