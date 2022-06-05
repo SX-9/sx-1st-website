@@ -1,7 +1,17 @@
 let deferredPrompt;
+
+fetch('https://visitorcounter.sx9.repl.co/').then(res => res.json()).then(data => {
+    console.log(data);
+    document.getElementById('counter').innerText = data.visits;
+});
+
 window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
+});
+
+window.addEventListener('appinstalled', (evt) => {
+    alert('Thanks for installing!');
 });
 
 document.getElementById('web').onclick = () => {

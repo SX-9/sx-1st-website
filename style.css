@@ -36,6 +36,7 @@ img {
 h1 { color: var(--cyan); margin: 10px; }
 p { margin: 10px; }
 hr { transform: rotate(90deg); }
+span { color: var(--green); font-weight: bolder; }
 
 button {
   border: none;
@@ -60,8 +61,13 @@ button#github { background-color: #4a4a4a; }
 button#github:hover { background-color: #717171; }
 button#twitter { background-color: #1da1f2; }
 button#twitter:hover { background-color: #6bbef1; }
-button#email { background-color: #d4ff00; }
+button#email { background-color: var(--yellow); }
 button#email:hover { background-color: #f9ff86; }
+
+iframe {
+  border: none;
+  height: 3.5em;
+}
 
 @media screen and (max-width: 580px) {
   div#buttons {
