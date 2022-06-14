@@ -1,27 +1,7 @@
-let deferredPrompt;
-
 fetch('https://visitorcounter.sx9.repl.co/').then(res => res.json()).then(data => {
     console.log(data);
     document.getElementById('counter').innerText = data.visits;
 });
-
-window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-});
-
-window.addEventListener('appinstalled', (evt) => {
-    alert('Thanks for installing!');
-});
-
-document.getElementById('web').onclick = () => {
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-            alert('Thanks for installing my pwa!');
-        }
-    });
-};
 
 document.getElementById('bot').onclick = () => {
     window.open('https://top.gg/bot/889384219678232606');

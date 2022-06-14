@@ -12,7 +12,12 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  height: 50em;
 }
+
+div#fadeOne { animation: fadeIn 1s ease-in-out 0s; }
+div#fadeTwo { animation: fadeIn 1s ease-in-out 1s; }
+div#fadeThree { animation: fadeIn 1s ease-in-out 2s; }
 
 div#container {
   position: fixed;
@@ -64,13 +69,18 @@ button#twitter:hover { background-color: #6bbef1; }
 button#email { background-color: var(--yellow); }
 button#email:hover { background-color: #f9ff86; }
 
-iframe {
-  border: none;
-  height: 3.5em;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @media screen and (max-width: 580px) {
   div#buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  div#fadeOne {
     display: flex;
     flex-direction: column;
     align-items: center;
