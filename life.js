@@ -1,6 +1,9 @@
 fetch('https://visitorcounter.sx9.repl.co/').then(res => res.json()).then(data => {
     console.log(data);
-    document.getElementById('counter').innerText = data.visits;
+    document.getElementById('counter').innerText = data.visits + "th";
+}).catch(err => {
+    console.log(err)
+    document.getElementById('visits').remove()
 });
 
 document.getElementById('bot').onclick = () => {

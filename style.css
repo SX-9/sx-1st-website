@@ -15,10 +15,6 @@ body {
   height: 50em;
 }
 
-div#fadeOne { animation: fadeIn 1s ease-in-out 0s; }
-div#fadeTwo { animation: fadeIn 1s ease-in-out 1s; }
-div#fadeThree { animation: fadeIn 1s ease-in-out 2s; }
-
 div#container {
   position: fixed;
   top: 0;
@@ -29,6 +25,7 @@ div#container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation: fadeIn 1s ease-in-out;
 }
 
 img {
@@ -37,11 +34,14 @@ img {
   height: 5.5em;
   background-color: #393939;
 }
+img:hover { animation: spin 1.5s ease-in-out; }
 
 h1 { color: var(--cyan); margin: 10px; }
 p { margin: 10px; }
 hr { transform: rotate(90deg); }
 span { color: var(--green); font-weight: bolder; }
+span:hover { animation: smallToBig 1s ease-in-out; font-size: 2em; }
+
 
 button {
   border: none;
@@ -57,7 +57,12 @@ button {
   cursor: pointer;
 }
 
-button:hover { background-color: #7e7e7e; }
+button:hover { 
+  background-color: #7e7e7e; 
+  animation: buttonHover 0.5s ease-in-out;
+  transform: translateY(-10px);
+}
+
 button::before { content: "➤ "; color: white; }
 button:hover:before { color: #dcdcdc; }
 button#discord { background-color: #4f26b0; }
@@ -70,17 +75,33 @@ button#email { background-color: var(--yellow); }
 button#email:hover { background-color: #f9ff86; }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { 
+    opacity: 0; 
+    transform: translateY(10px);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0px);
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes smallToBig {
+  from { font-size: 1em; }
+  to { font-size: 2em; }
+}
+
+@keyframes buttonHover {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
 }
 
 @media screen and (max-width: 580px) {
-  div#buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  div#fadeOne {
+  div#buttons, div#info {
     display: flex;
     flex-direction: column;
     align-items: center;
