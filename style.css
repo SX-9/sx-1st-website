@@ -1,18 +1,22 @@
 :root {
   color-scheme: dark;
   --cyan: #00e1ff;
-  --red: #ff0000;
   --yellow: #ffd700;
   --green: #00ff00;
 }
 
 body {
   font-family: 'Raleway', sans-serif;
-  background-image: linear-gradient(25deg, #004e5f, #000);
+  background: repeating-linear-gradient(
+    45deg,
+    #000000,
+    #000000 2em,
+    #094049 2em,
+    #094049 3em
+  );
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 50em;
 }
 
 div#container {
