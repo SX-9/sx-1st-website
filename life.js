@@ -27,3 +27,9 @@ document.getElementById('github').onclick = () => {
 document.getElementById('twitter').onclick = () => {
     window.open('https://twitter.com/SX_Disord');
 }
+
+console.log(
+    "%cHello%cWorld()", 
+    "color: cyan; background-color: black; font-family: sans-serif; font-weight: bold;", 
+    "color:red; background-color: white; font-family: sans-serif; font-weight: bold;"
+);
