@@ -46,7 +46,6 @@ hr { transform: rotate(90deg); }
 span { color: var(--green); font-weight: bolder; }
 span:hover { animation: smallToBig 1s ease-in-out; font-size: 2em; }
 
-
 button {
   border: none;
   border-radius: 5px;
@@ -60,12 +59,20 @@ button {
   margin: 4px 2px;
   cursor: pointer;
 }
-
 button:hover { 
   background-color: #7e7e7e; 
   animation: buttonHover 0.5s ease-in-out;
   transform: translateY(-10px);
 }
+
+button#share {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  background-color: #1df239;
+}
+button#share:hover { background-color: #6bf172; }
+button#share::before { content: ""; }
 
 button::before { content: "➤ "; color: white; }
 button:hover:before { color: #dcdcdc; }

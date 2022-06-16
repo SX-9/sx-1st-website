@@ -27,6 +27,9 @@ document.getElementById('github').onclick = () => {
 document.getElementById('twitter').onclick = () => {
     window.open('https://twitter.com/SX_Disord');
 }
+document.getElementById('share').onclick = () => {
+    window.open('https://twitter.com/share?url=https://sx-9.github.io/');
+}
 
 console.log(
     "%cHello%cWorld()", 
