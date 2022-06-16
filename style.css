@@ -66,8 +66,8 @@ button:hover {
 }
 
 button#share {
-  width: 10%;
-  height: 10%;
+  width: 3em;
+  height: 3em;
   border-radius: 50%;
   position: fixed;
   bottom: 1em;
