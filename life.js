@@ -28,7 +28,7 @@ document.getElementById('twitter').onclick = () => {
     window.open('https://twitter.com/SX_Disord');
 }
 document.getElementById('share').onclick = () => {
-    window.open('https://twitter.com/share?text=Check%20Out20%@SX_Disord%20Website!&url=https://sx-9.repl.co/');
+    window.open('https://twitter.com/share?url=https://sx9.is-a.dev/');
 }
 
 console.log(
