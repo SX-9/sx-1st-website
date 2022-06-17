@@ -19,7 +19,7 @@ document.getElementById('email').onclick = () => {
 }
 
 document.getElementById('discord').onclick = () => {
-    window.open('https://discord.gg/Pj2Qgqd');
+    window.open('https://discord.st/sx-aircraft');
 }
 document.getElementById('github').onclick = () => {
     window.open('https://github.com/SX-9');
