@@ -87,19 +87,19 @@ button#share {
   position: fixed;
   bottom: 1em;
   right: 1em;
-  background-color: #1df239;
+  background-color: var(--green);
 }
 button#share:hover { background-color: #6bf172; }
 button#share::before { content: ""; }
 
 button::before { content: "➤ "; color: white; }
 button:hover:before { color: #dcdcdc; }
-button#discord { background-color: #4f26b0; }
-button#discord:hover { background-color: #6c54a4; }
+button#discord { background-color: #7d4fe7; }
+button#discord:hover { background-color: #8468c5; }
 button#github { background-color: #4a4a4a; }
 button#github:hover { background-color: #717171; }
-button#twitter { background-color: #1da1f2; }
-button#twitter:hover { background-color: #6bbef1; }
+button#twitter { background-color: var(--cyan); }
+button#twitter:hover { background-color: #6beff1; }
 button#email { background-color: var(--yellow); }
 button#email:hover { background-color: #f9ff86; }
 
