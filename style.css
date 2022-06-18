@@ -17,6 +17,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  height: 50em;
 }
 
 div#container {
@@ -42,6 +43,20 @@ img:hover { animation: spin 1.5s ease-in-out; }
 
 h1 { color: var(--cyan); margin: 10px; }
 p { margin: 10px; }
+
+p#secret {
+  position: fixed;
+  bottom: 1.5em;
+  left: 1.5em;
+  color: #000;
+  font-weight: 700;
+  background-color: #000;
+}
+p#secret::selection {
+  background: var(--cyan);
+  color: #000;
+}
+
 hr { transform: rotate(90deg); }
 span { color: var(--green); font-weight: bolder; }
 span:hover { animation: smallToBig 1s ease-in-out; font-size: 2em; }
@@ -87,6 +102,18 @@ button#twitter { background-color: #1da1f2; }
 button#twitter:hover { background-color: #6bbef1; }
 button#email { background-color: var(--yellow); }
 button#email:hover { background-color: #f9ff86; }
+
+::-webkit-scrollbar { width: 15px; }
+::-webkit-scrollbar-track {
+  background: #303030;
+  border: 2px solid #5a5a5a;
+}
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border: 3px solid #ffffff;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover { background: #555; }
 
 @keyframes fadeIn {
   from { 
