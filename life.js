@@ -1,3 +1,24 @@
+var install;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    install = e;
+});
+
+const installPrompt = () => {
+    if (install) {
+        install.prompt();
+        install.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the APPS prompt');
+            } else {
+                console.log('User dismissed the APPS prompt');
+            }
+            install = null;
+        });
+    }
+}
+
 const typingChange = () => {
     const typing = document.getElementById('typing');
 
@@ -57,6 +78,9 @@ document.getElementById('twitter').onclick = () => {
 document.getElementById('share').onclick = () => {
     window.open('https://twitter.com/share?url=https://sx9.is-a.dev/');
 }
+document.getElementById('pwa').onclick = () => {
+    installPrompt();
+}
 
 console.log(
     "%cHello%cWorld()", 
@@ -65,6 +89,6 @@ console.log(
 );
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js');
+    navigator.serviceWorker.register('pwa/sw.js');
     console.log("Service Worker Registered!");
 }

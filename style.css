@@ -56,6 +56,17 @@ p#secret::selection {
   background: var(--cyan);
   color: #000;
 }
+span#pwa {
+  color: #000;
+  text-decoration: underline;
+}
+span#pwa::selection {
+  color: lightskyblue;
+}
+span#pwa:hover {
+  animation: none;
+  font-size: 1em;
+}
 
 hr { transform: rotate(90deg); }
 span { color: var(--green); font-weight: bolder; }
