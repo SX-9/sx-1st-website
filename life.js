@@ -46,7 +46,7 @@ const typingChange = () => {
 typingChange();
 setInterval(typingChange, 7000);
 
-fetch('https://visitorcounter.sx9.repl.co/').then(res => res.json()).then(data => {
+fetch('https://visitors.sx9.repl.co/').then(res => res.json()).then(data => {
     console.log(data);
     document.getElementById('counter').innerText = data.visits + "th";
 }).catch(err => {
