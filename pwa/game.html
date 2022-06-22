@@ -27,7 +27,7 @@
 
       div.buttons {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 0.5em;
         gap: 1em;
       }
@@ -65,6 +65,12 @@
 
       button#score10x {
         color: blue;
+      }
+
+      @media (max-width: 600px) {
+        div.buttons {
+          grid-template-columns: 1fr 1fr;
+        }
       }
     </style>
   </head>
