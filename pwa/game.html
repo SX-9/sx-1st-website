@@ -26,15 +26,10 @@
       }
 
       div.buttons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      div.gap {
-        width:0.5em;
-        height:auto;
-        display:inline-block;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.5em;
+        gap: 1em;
       }
 
       span#label {
@@ -44,6 +39,12 @@
 
       span#score {
         color: lightblue;
+      }
+
+      button {
+        padding: 0.5em;
+        font-size: 1.3em;
+        height: 6em;
       }
 
       button#scoreAdd {
@@ -59,40 +60,28 @@
       }
 
       button#powerUp {
-        display: none;
         color: purple;
+      }
+
+      button#score2x {
+        color: blue;
       }
     </style>
   </head>
   <body>
     <h1>A <span id="label">Counting</span> Game</h1>
-    <div class="buttons">
+    <p>Points: <span id="score">0</span></p>
+    <div class="buttons" id="controlls">
       <button id="scoreAdd" onclick="add()">+1</button>
-      <div class="gap"></div>
       <button id="scoreRemove" onclick="remove()">-1</button>
-      <div class="gap"></div>
       <button id="scoreReset" onclick="reset()">Reset</button>
-    </div>
-    <p>Score: <span id="score">0</span></p>
-    <p id="reminder"><i>This Website Has Anti-Cheat</i></p>
-    <div class="buttons">
       <button id="powerUp" onclick="add2x()">2x Boost (One Time Use)</button>
+      <button id="buy2x" onclick="buy2x()">Buy 2x Boost (150 Points)</button>
+      <button id="idleGrind" onclick="idleGrind()">Idle Grind (500 Points)</button>
     </div>
     <script type="text/javascript">
       var score = document.getElementById('score');
-
-      window.addEventListener('load', () => {
-        setTimeout(hideReminder, 5000)
-        setTimeout(showBoost, 5000)
-      });
-
-      function hideReminder() {
-        document.getElementById('reminder').remove();
-      };
-
-      function showBoost() {
-        document.getElementById('powerUp').style.display = "block";
-      };
+      var idleInterval;
 
       function add2x() {
         score.innerText = (parseInt(score.innerText) * 2).toString();
@@ -114,6 +103,48 @@
         score.innerText = "0";
         console.log("Score Reseted");
       };
+
+      function add2xPurchase() {
+        score.innerText = (parseInt(score.innerText) * 2).toString();
+        console.log("+2 Score");
+      };
+
+      function buy2x() {
+        if (parseInt(score.innerText) >= 150) {
+          score.innerText = (parseInt(score.innerText) - 100).toString();
+          let button2x = document.createElement('button');
+          button2x.id = "score2x";
+          button2x.innerText = "x2";
+          button2x.onclick = add2xPurchase;
+          document.getElementById('controlls').appendChild(button2x);
+          document.getElementById('buy2x').remove();
+          alert("2x Boost Purchased");
+        } else {
+          alert("Not Enough Points");
+        }
+      };
+
+      function idleGrind() {
+        if (parseInt(score.innerText) >= 500) {
+          score.innerText = (parseInt(score.innerText) - 500).toString();
+          idleInterval = setInterval(add, 150);
+          alert("Idle Grind Purchased");
+          document.getElementById('idleGrind').remove();
+          let stopButton = document.createElement('button');
+          stopButton.id = "stopGrind";
+          stopButton.innerText = "Stop Grind";
+          stopButton.onclick = stopGrind;
+          document.getElementById('controlls').appendChild(stopButton);
+        } else {
+          alert("Not Enough Points");
+        }
+      };
+
+      function stopGrind() {
+        clearInterval(idleInterval);
+        document.getElementById('stopGrind').remove();
+        let button = document.createElement('button');
+      }
 
       document.addEventListener('contextmenu', event =>
         event.preventDefault()

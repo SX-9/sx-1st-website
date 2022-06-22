@@ -43,7 +43,11 @@
         console.log("Command " + input + " Has Been Executed!");
 
         if (input === "!help") {
-          output.innerText = "Commands: !help and !add-cmd"
+          output.innerText = "Commands: !help, !date, and !add-cmd"
+        }
+
+        if (input === "!date") {
+          output.innerText = "The Current Date Is: " + new Date().toDateString();
         }
 
         if (input === "!add-cmd") {
