@@ -1,10 +1,8 @@
 var install;
-
 window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     install = e;
 });
-
 const installPrompt = () => {
     if (install) {
         install.prompt();

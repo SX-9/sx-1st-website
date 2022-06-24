@@ -7,6 +7,26 @@
 
 body {
   font-family: 'Raleway', sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 50em;
+}
+
+div.container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+div#c1 {
   background: repeating-linear-gradient(
     45deg,
     #000000,
@@ -14,23 +34,33 @@ body {
     #094049 2em,
     #094049 3em
   );
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 50em;
 }
-
-div#container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  animation: fadeIn 1s ease-in-out;
+div#c2 { 
+  background: repeating-linear-gradient(
+    45deg,
+    #000000,
+    #000000 2em,
+    #0e4909 2em,
+    #0e4909 3em
+  );
+}
+div#c3 {
+  background: repeating-linear-gradient(
+    45deg,
+    #000000,
+    #000000 2em,
+    #3c4e09 2em,
+    #3c4e09 3em
+  );
+}
+div#c4 {
+  background: repeating-linear-gradient(
+    45deg,
+    #000000,
+    #000000 2em,
+    #490914 2em,
+    #490914 3em
+  );
 }
 
 img {
@@ -41,8 +71,9 @@ img {
 }
 img:hover { animation: spin 1.5s ease-in-out; }
 
+h3 { text-align: center; color: var(--green); }
 h1 { color: var(--cyan); margin: 10px; }
-p { margin: 10px; }
+p { margin: 10px; font-size: 1.5em; }
 
 p#secret {
   position: fixed;
@@ -68,7 +99,6 @@ span#pwa:hover {
   font-size: 1em;
 }
 
-hr { transform: rotate(90deg); }
 span { color: var(--green); font-weight: bolder; }
 span:hover { animation: smallToBig 1s ease-in-out; font-size: 2em; }
 
@@ -114,6 +144,22 @@ button#twitter:hover { background-color: #6beff1; }
 button#email { background-color: var(--yellow); }
 button#email:hover { background-color: #f9ff86; }
 
+progress {
+  color: var(--cyan);
+  background-color: rgb(255, 255, 255);
+  border-radius: 7px;
+}
+progress::-webkit-progress-bar {
+  border: solid #000000 3px;
+  color: var(--cyan);
+  background-color: #ffffff;
+  border-radius: 0 7px 0 7px;
+}
+progress::-webkit-progress-value {
+  border-radius: 0 0 0 7px;
+  background-color: var(--cyan);
+}
+
 ::-webkit-scrollbar { width: 15px; }
 ::-webkit-scrollbar-track {
   background: #303030;
@@ -153,7 +199,7 @@ button#email:hover { background-color: #f9ff86; }
 }
 
 @media screen and (max-width: 580px) {
-  div#buttons, div#info {
+  div.info {
     display: flex;
     flex-direction: column;
     align-items: center;
