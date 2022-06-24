@@ -171,7 +171,7 @@
       };
 
       function checkScoreReached() {
-        if (parseInt(score.innerText) >= 10000000) {
+        if (parseInt(localStorage.getItem("score")) >= 10000000) {
           alert("You Reached 10 Million Points!");
           localStorage.clear();
           window.location.reload();
