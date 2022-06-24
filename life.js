@@ -14,7 +14,6 @@ const installPrompt = () => {
             } else {
                 console.log('User dismissed the APPS prompt');
             }
-            install = null;
         });
     }
 }
@@ -50,6 +49,11 @@ fetch('https://visitors.sx9.repl.co/').then(res => res.json()).then(data => {
     console.log(data);
     document.getElementById('counter').innerText = data.visits + "th";
 }).catch(err => {
+    if (err.status === 429) {
+        alert("You Are Rate Limited");
+        window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+        document.getElementById('counter').innerText = "You Are Rate Limited For 2 Hours!";
+    }
     console.log(err)
     document.getElementById('visits').remove()
 });

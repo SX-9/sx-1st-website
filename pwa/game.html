@@ -76,7 +76,7 @@
   </head>
   <body>
     <h1>A <span id="label">Counting</span> Game</h1>
-    <p>Points: <span id="score">0</span></p>
+    <p>Anti-Cheat Is On | Points: <span id="score">0</span></p>
     <div class="buttons" id="controlls">
       <button id="scoreAdd" onclick="add()">+1</button>
       <button id="scoreRemove" onclick="remove()">-1</button>
@@ -91,6 +91,7 @@
 
       function add2x() {
         score.innerText = (parseInt(score.innerText) * 2).toString();
+        localStorage.setItem('score', score.innerText);
         document.getElementById('powerUp').remove();
         localStorage.setItem('powerUp', 'true');
         console.log("2x Score");
@@ -98,22 +99,26 @@
 
       function add() {
         score.innerText = (parseInt(score.innerText) + 1).toString();
+        localStorage.setItem('score', score.innerText);
         console.log("+1 Score");
       };
 
       function remove() {
         score.innerText = (parseInt(score.innerText) - 1).toString();
+        localStorage.setItem('score', score.innerText);
         console.log("-1 Score");
       };
 
       function reset() {
         score.innerText = "0";
+        localStorage.setItem('score', score.innerText);
         console.log("Score Reseted");
       };
 
       function add10xPurchase() {
         score.innerText = (parseInt(score.innerText) + 10).toString();
         console.log("+10 Score");
+        localStorage.setItem('score', score.innerText);
       };
 
       function buy2x2() {
@@ -126,13 +131,13 @@
 
       function buy2x() {
         score.innerText = (parseInt(score.innerText) - 100).toString();
-          let button10x = document.createElement('button');
-          button10x.id = "score10x";
-          button10x.innerText = "+10";
-          button10x.onclick = add10xPurchase;
-          document.getElementById('controlls').appendChild(button10x);
-          document.getElementById('buy2x').remove();
-          localStorage.setItem('buy2x', 'true');
+        let button10x = document.createElement('button');
+        button10x.id = "score10x";
+        button10x.innerText = "+10";
+        button10x.onclick = add10xPurchase;
+        document.getElementById('controlls').appendChild(button10x);
+        document.getElementById('buy2x').remove();
+        localStorage.setItem('buy2x', 'true');
       };
 
       function idleGrind() {
@@ -155,11 +160,28 @@
         clearInterval(idleInterval);
         document.getElementById('stopGrind').remove();
         let button = document.createElement('button');
-      }
+      };
 
-      window.onbeforeunload = () => {
-        localStorage.setItem('score', score.innerText);
-      }
+      function checkScoreCheated() {
+        if (isNaN(parseInt(score.innerText)) || parseInt(score.innerText) > parseInt(localStorage.getItem('score'))) {
+          window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+          reset();
+          window.location.reload();
+        } 
+      };
+
+      function checkScoreReached() {
+        if (parseInt(score.innerText) >= 10000000) {
+          alert("You Reached 10 Million Points!");
+          localStorage.clear();
+          window.location.reload();
+        }
+      };
+
+      setInterval(() => {
+        checkScoreCheated();
+        checkScoreReached();
+      }, 100);
 
       window.onload = () => {
         if (localStorage.getItem('score') != null) {
