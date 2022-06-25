@@ -9,7 +9,7 @@ const observer = new IntersectionObserver(entries => {
         }
     });
 });
-let scrollItems = document.querySelectorAll('div.info');
+let scrollItems = document.querySelectorAll('div.container');
 scrollItems.forEach(item => {
     observer.observe(item);
 });
