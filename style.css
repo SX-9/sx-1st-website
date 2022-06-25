@@ -26,17 +26,24 @@ div.container {
   justify-content: center;
   opacity: 0;
 }
-
 div#c1 {
+  background-size: 187vh; 
+  background-position: center;
   background: url(images/bg1.jpg) repeat fixed 100%;
 }
 div#c2 { 
+  background-size: cover; 
+  background-position: center;
   background: url(images/bg2.jpg) repeat fixed 100%;
 }
 div#c3 {
+  background-size: cover; 
+  background-position: center;
   background: url(images/bg3.jpg) repeat fixed 100%;
 }
 div#c4 {
+  background-size: cover; 
+  background-position: center;
   background: url(images/bg4.jpg) repeat fixed 100%;
 }
 div.scroll {
