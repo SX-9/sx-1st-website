@@ -38,6 +38,7 @@ div#c2 {
   background-position: center;
 }
 div#c3 {
+  height: 80vh;
   background: url(images/bg3.jpg) repeat fixed 100%;
   background-size: cover; 
   background-position: center;
@@ -64,7 +65,7 @@ h1, h2, h3, p { font-weight: 5rem; }
 h3 { text-align: center; color: var(--green); }
 h1 { color: var(--cyan); margin: 10px; }
 p { margin: 10px; font-size: 1.5em; }
-
+p#stats { background-color: #000000; font-weight: 600; }
 p#secret {
   position: fixed;
   font-size: 1em;
@@ -190,6 +191,7 @@ progress::-webkit-progress-value {
 }
 
 @media screen and (max-width: 580px) {
+  p#stats { text-align: center; }
   div.info {
     display: flex;
     flex-direction: column;
