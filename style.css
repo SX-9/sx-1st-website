@@ -77,7 +77,6 @@ p#secret::selection {
   background: var(--cyan);
   color: #000;
 }
-.black { color: #000; }
 span#pwa {
   color: #000;
   text-decoration: underline;
