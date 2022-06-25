@@ -27,16 +27,7 @@ div.container {
   opacity: 0;
 }
 
-div.lazy-background {
-  background-size: cover;
-  background-position: center;
-}
-
-div#c1.lazy-background {
-  background-size: 187vh;
-  background-position: center;
-}
-div#c1.visible {
+div#c1 {
   background: url(images/bg1.jpg) repeat fixed 100%;
 }
 div#c2 { 
