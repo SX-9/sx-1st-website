@@ -19,18 +19,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     install = e;
 });
-const installPrompt = () => {
-    if (install) {
-        install.prompt();
-        install.userChoice.then((choiceResult) => {
-            if (choiceResult.outcome === 'accepted') {
-                console.log('User accepted the pwa prompt');
-            } else {
-                console.log('User dismissed the pwa prompt');
-            }
-        });
-    }
-}
+const installPrompt = () => install.prompt();
 
 const typingChange = () => {
     const typing = document.getElementById('typing');
