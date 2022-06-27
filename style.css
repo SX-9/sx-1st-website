@@ -151,7 +151,7 @@ progress {
   color: var(--cyan);
   background-color: rgb(255, 255, 255);
   border-radius: 7px;
-  width: 17em;
+  width: 15em;
 }
 progress::-webkit-progress-bar {
   border: solid #000000 3px;
