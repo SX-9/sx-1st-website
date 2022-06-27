@@ -40,20 +40,36 @@ div#c2 {
   background-repeat: no-repeat;
 }
 div#c3 {
-  height: 97vh;
+  height: max-content;
   background: url(images/bg3.jpg);
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
 }
 div#c4 {
+  height: 135vh;
   background: url(images/bg4.jpg);
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+div#c5 {
+  height: 40vh;
+  background: url(images/bg5.jpg);
   background-size: cover; 
   background-position: center;  
   background-repeat: no-repeat;
 }
 div.scroll {
   animation: fadeIn 2.5s ease-in-out forwards;
+}
+div#projects { 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
 }
 
 img {
@@ -70,19 +86,6 @@ h3 { text-align: center; color: var(--green); font-size: 1.7em;}
 h1 { color: var(--cyan); margin: 10px; }
 p { margin: 10px; font-size: 1.5em; }
 p#stats { background-color: #000000; font-weight: 600; padding: 10px; }
-p#secret {
-  position: fixed;
-  font-size: 1em;
-  top: 1.5em;
-  left: 1.5em;
-  color: #000;
-  font-weight: 700;
-  background-color: #000;
-}
-p#secret::selection {
-  background: var(--cyan);
-  color: #000;
-}
 p.border { 
   color: #000;
   text-shadow: 0 0 10px #fff;
@@ -148,6 +151,7 @@ progress {
   color: var(--cyan);
   background-color: rgb(255, 255, 255);
   border-radius: 7px;
+  width: 17em;
 }
 progress::-webkit-progress-bar {
   border: solid #000000 3px;
@@ -158,6 +162,21 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   border-radius: 0 0 0 7px;
   background-color: var(--cyan);
+}
+
+fieldset { 
+  border: none;
+  border-radius: 5px;
+  background-color: #000000;
+  padding: 10px;
+  width: 20em;
+  min-height: 17em;
+  margin: 0 auto;
+}
+legend { 
+  color: var(--green);
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 ::-webkit-scrollbar { width: 15px; }
@@ -198,6 +217,12 @@ progress::-webkit-progress-value {
   to { transform: translateY(-10px); }
 }
 
+@media screen and (max-width: 1070px) {
+  div#projects { grid-template-columns: 1fr 1fr; }
+}
+@media screen and (max-width: 750px) {
+  div#projects { grid-template-columns: 1fr; }
+}
 @media screen and (max-width: 580px) {
   p#stats { text-align: center; }
   div.info {
