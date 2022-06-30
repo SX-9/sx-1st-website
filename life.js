@@ -52,14 +52,13 @@ fetch('https://visitors.sx9.repl.co/').then(res => res.json()).then(data => {
     console.log(data);
     document.getElementById('counter').innerText = data.visits + "th";
 }).catch(err => {
-    if (err.status === 429) {
-        alert("You Are Rate Limited");
-        window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
-        document.getElementById('counter').innerText = "You Are Rate Limited For 2 Hours!";
-    }
     console.log(err)
     document.getElementById('visits').remove()
 });
+
+document.getElementById('game').onclick = () => {
+    window.open('https://turbowarp.org/710436644');
+}
 
 document.getElementById('bot').onclick = () => {
     window.open('https://top.gg/bot/889384219678232606');
