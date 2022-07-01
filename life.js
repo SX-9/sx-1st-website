@@ -69,7 +69,7 @@ document.getElementById('chat').onclick = () => {
 }
 
 document.getElementById('email').onclick = () => {
-    window.open('mailto:sx-91@outlook.com');
+    window.open('mailto:hello@mail.sx9.is-a.dev');
 }
 
 document.getElementById('discord').onclick = () => {
