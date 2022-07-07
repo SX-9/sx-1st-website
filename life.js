@@ -68,6 +68,10 @@ document.getElementById('chat').onclick = () => {
     window.open('https://x-cord-client.sx9.repl.co');
 }
 
+document.getElementById('api').onclick = () => {
+    window.open('https://the-art-api.herokuapp.com/');
+}
+
 document.getElementById('email').onclick = () => {
     window.open('mailto:hello@mail.sx9.is-a.dev');
 }
