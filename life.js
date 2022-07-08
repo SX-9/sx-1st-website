@@ -1,3 +1,13 @@
+fetch('https://sx9-wakatime.herokuapp.com/').then(res => res.json()).then(data => {
+    document.getElementById('html').value = data.html;
+    document.getElementById('css').value = data.css;
+    document.getElementById('js').value = data.js;
+}).catch(err => {
+    document.getElementById('html').remove();
+    document.getElementById('css').remove();
+    document.getElementById('js').remove();
+});
+
 document.querySelectorAll('img').forEach(img => {
     img.setAttribute('loading', 'lazy');
 });
