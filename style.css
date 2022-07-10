@@ -25,42 +25,42 @@ div.container {
   justify-content: center;
   opacity: 0;
 }
-div#c1 {
-  height: 90vh;
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
-}
-div#c2 { 
-  height: 70vh;
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
-}
-div#c3 {
-  height: max-content;
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
-}
-div#c4 {
-  height: max-content;
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
-}
-div#c5 {
-  height: 40vh;
+div#c1 { height: 90vh; }
+div#c2 { height: 70vh; }
+div#c3 { height: max-content }
+div#c4 { height: max-content }
+div#c5 { height: 40vh; }
+div#c1.scroll {
+  background: url(images/bg1.jpg);
   background-size: cover; 
   background-position: center;  
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
+}
+div#c2.scroll {
+  background: url(images/bg2.jpg);
+  background-size: cover; 
+  background-position: center;  
+  background-repeat: no-repeat; 
+}
+div#c3.scroll {
+  background: url(images/bg3.jpg);
+  background-size: cover; 
+  background-position: center;  
+  background-repeat: no-repeat; 
+}
+div#c4.scroll {
+  background: url(images/bg4.jpg);
+  background-size: cover; 
+  background-position: center;  
+  background-repeat: no-repeat; 
+}
+div#c5.scroll {
+  background: url(images/bg5.jpg);
+  background-size: cover; 
+  background-position: center;  
+  background-repeat: no-repeat; 
 }
 div.scroll { animation: fadeIn 2.5s ease-in-out forwards; }
-div#c1.scroll { background: url(images/bg1.jpg); }
-div#c2.scroll { background: url(images/bg2.jpg); }
-div#c3.scroll { background: url(images/bg3.jpg); }
-div#c4.scroll { background: url(images/bg4.jpg); }
-div#c5.scroll { background: url(images/bg5.jpg); }
 div#projects { 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -77,7 +77,7 @@ img#pfp {
   background-color: #393939;
 }
 img#pfp:hover { animation: spin 1.5s ease-in-out; }
-img#skills { width: 35vw; }
+img#skills { width: 35vw; transform: translateY(-1.5em);}
 
 h1, h2, h3, p { font-weight: bold; }
 

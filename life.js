@@ -1,6 +1,11 @@
-document.querySelectorAll('img').forEach(img => {
-    img.setAttribute('loading', 'lazy');
-});
+if (window.innerWidth < 380) {
+    let answear = prompt("Your Device Is Too Small, Are You Sure You Want To View This Page?\n\nType 'yes' to continue.");
+    if (answear !== "yes") {
+        document.body.style.display = 'none';
+    } else {
+        document.body.style.display = 'block';
+    }
+}
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
