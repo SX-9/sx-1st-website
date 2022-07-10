@@ -27,42 +27,40 @@ div.container {
 }
 div#c1 {
   height: 90vh;
-  background: url(images/bg1.jpg);
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
 }
 div#c2 { 
   height: 70vh;
-  background: url(images/bg2.jpg);
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
 }
 div#c3 {
   height: max-content;
-  background: url(images/bg3.jpg);
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
 }
 div#c4 {
   height: max-content;
-  background: url(images/bg4.jpg);
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
 }
 div#c5 {
   height: 40vh;
-  background: url(images/bg5.jpg);
   background-size: cover; 
   background-position: center;  
   background-repeat: no-repeat;
 }
-div.scroll {
-  animation: fadeIn 2.5s ease-in-out forwards;
-}
+div.scroll { animation: fadeIn 2.5s ease-in-out forwards; }
+div#c1.scroll { background: url(images/bg1.jpg); }
+div#c2.scroll { background: url(images/bg2.jpg); }
+div#c3.scroll { background: url(images/bg3.jpg); }
+div#c4.scroll { background: url(images/bg4.jpg); }
+div#c5.scroll { background: url(images/bg5.jpg); }
 div#projects { 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -72,13 +70,14 @@ div#projects {
   margin-bottom: 2em;
 }
 
-img {
+img#pfp {
   border-radius: 50%;
   width: 5.5em;
   height: 5.5em;
   background-color: #393939;
 }
-img:hover { animation: spin 1.5s ease-in-out; }
+img#pfp:hover { animation: spin 1.5s ease-in-out; }
+img#skills { width: 35vw; }
 
 h1, h2, h3, p { font-weight: bold; }
 
@@ -146,23 +145,6 @@ button#twitter { background-color: var(--cyan); }
 button#twitter:hover { background-color: #6beff1; }
 button#email { background-color: var(--yellow); }
 button#email:hover { background-color: #f9ff86; }
-
-progress {
-  color: var(--cyan);
-  background-color: rgb(255, 255, 255);
-  border-radius: 7px;
-  width: 15em;
-}
-progress::-webkit-progress-bar {
-  border: solid #000000 3px;
-  color: var(--cyan);
-  background-color: #ffffff;
-  border-radius: 0 7px 0 7px;
-}
-progress::-webkit-progress-value {
-  border-radius: 0 0 0 7px;
-  background-color: var(--cyan);
-}
 
 fieldset { 
   border: none;
