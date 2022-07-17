@@ -77,6 +77,10 @@ document.getElementById('api').onclick = () => {
     window.open('https://the-art-api.herokuapp.com/');
 }
 
+document.getElementById('os').onclick = () => {
+    window.open('https://checkmate-os.sx9.is-a.dev');
+}
+
 document.getElementById('email').onclick = () => {
     window.open('mailto:hello@mail.sx9.is-a.dev');
 }
