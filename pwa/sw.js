@@ -1,39 +1,86 @@
-const OFFLINE_VERSION = 1;
-const CACHE_NAME = 'offline';
-const OFFLINE_URL = 'offline.html';
+ importScripts("https://storage.googleapis.com/workbox-cdn/releases/6.2.0/workbox-sw.js");
 
-self.addEventListener('install', (event) => {
-  event.waitUntil((async () => {
-    const cache = await caches.open(CACHE_NAME);
-    await cache.add(new Request(OFFLINE_URL, {cache: 'reload'}));
-  })());
-});
+workbox.setConfig({ debug: true });
 
-self.addEventListener('activate', (event) => {
-  event.waitUntil((async () => {
-    if ('navigationPreload' in self.registration) {
-      await self.registration.navigationPreload.enable();
+const {
+    routing: { registerRoute, setCatchHandler },
+    strategies: { CacheFirst, NetworkFirst, StaleWhileRevalidate },
+    cacheableResponse: { CacheableResponse, CacheableResponsePlugin },
+    expiration: { ExpirationPlugin, CacheExpiration },
+    precaching: { matchPrecache, precacheAndRoute },
+} = workbox;
+
+precacheAndRoute([{ url: "/offline.html", revision: null }]);
+
+// Cache page navigations (html) with a Network First strategy
+registerRoute(
+    ({ request }) => request.mode === "navigate",
+    new NetworkFirst({
+        cacheName: "pages",
+        plugins: [
+            new CacheableResponsePlugin({
+                statuses: [200],
+            }),
+        ],
+    })
+);
+
+// Cache Google Fonts
+registerRoute(
+    ({ url }) =>
+        url.origin === "https://fonts.googleapis.com" ||
+        url.origin === "https://fonts.gstatic.com",
+    new StaleWhileRevalidate({
+        cacheName: "pwa-google-fonts",
+        plugins: [new ExpirationPlugin({ maxEntries: 20 })],
+    })
+);
+
+// Cache Images
+registerRoute(
+    ({ request }) => request.destination === "image",
+    new CacheFirst({
+        cacheName: "pwa-images",
+        plugins: [
+            new CacheableResponsePlugin({
+                statuses: [0, 200],
+            }),
+            new ExpirationPlugin({
+                maxEntries: 60,
+                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+            }),
+        ],
+    })
+);
+
+// Cache CSS, JS, Manifest, and Web Worker
+registerRoute(
+    ({ request }) =>
+        request.destination === "script" ||
+        request.destination === "style" ||
+        request.destination === "manifest" ||
+        request.destination === "worker",
+    new StaleWhileRevalidate({
+        cacheName: "pwa-static-assets",
+        plugins: [
+            new CacheableResponsePlugin({
+                statuses: [0, 200],
+            }),
+            new ExpirationPlugin({
+                maxEntries: 32,
+                maxAgeSeconds: 24 * 60 * 60, // 24 hours
+            }),
+        ],
+    })
+);
+
+// Catch routing errors, like if the user is offline
+setCatchHandler(async ({ event }) => {
+    // Return the precached offline page if a document is being requested
+    if (event.request.destination === "document") {
+        return matchPrecache("/offline.html");
     }
-  }));
-  self.clients.claim();
+
+    return Response.error();
 });
 
-self.addEventListener('fetch', (event) => {
-  if (event.request.mode === 'navigate') {
-    event.respondWith((async () => {
-      try {
-        const preloadResponse = await event.preloadResponse;
-        if (preloadResponse) {
-          return preloadResponse;
-        }
-        const networkResponse = await fetch(event.request);
-        return networkResponse;
-      } catch (error) {
-        console.log('Fetch failed; returning offline page instead.', error);
-        const cache = await caches.open(CACHE_NAME);
-        const cachedResponse = await cache.match(OFFLINE_URL);
-        return cachedResponse;
-      }
-    })());
-  }
-});

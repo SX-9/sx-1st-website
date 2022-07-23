@@ -24,7 +24,13 @@ window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     install = e;
 });
-const installPrompt = () => install.prompt();
+const installPrompt = () => {
+    if (install) {
+        install.prompt();
+    } else {
+        alert('Erorr: Install Prompt Not Found');
+    }
+};
 
 const typingChange = () => {
     const typing = document.getElementById('typing');
@@ -108,6 +114,9 @@ console.log(
 );
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('pwa/sw.js');
-    console.log("Service Worker Registered!");
+    navigator.serviceWorker.register('pwa/sw.js').then(() => {
+        console.log("Service Worker Registered!");
+    }).catch((err) => {
+        console.log("Service Worker Failed: " + err);
+    })
 }
