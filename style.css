@@ -61,7 +61,11 @@ div#c5.scroll {
   background-repeat: no-repeat; 
 }
 div.scroll { animation: fadeIn 2.5s ease-in-out forwards; }
-div#projects { 
+details#projects { 
+  width: 90vw;
+  margin-bottom: 2em; 
+}
+div#pg { 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1em;
@@ -79,7 +83,7 @@ img#pfp {
 img#pfp:hover { animation: spin 1.5s ease-in-out; }
 img#skills { width: 35vw; transform: translateY(-1.5em);}
 
-h1, h2, h3, p { font-weight: bold; }
+h1, h2, h3, p, summary { font-weight: bold; }
 
 h3 { text-align: center; color: var(--green); font-size: 1.7em;}
 h1 { color: var(--cyan); margin: 10px; }
