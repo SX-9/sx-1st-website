@@ -1,7 +1,6 @@
 :root {
   color-scheme: dark;
   --cyan: #00e1ff;
-  --yellow: #ffd700;
   --green: #5dfd5d;
 }
 
@@ -12,6 +11,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   height: 50em;
+  color: white;
 }
 
 div.container {
@@ -81,7 +81,7 @@ img#pfp {
   background-color: #393939;
 }
 img#pfp:hover { animation: spin 1.5s ease-in-out; }
-img#skills { width: 35vw; transform: translateY(-1.5em);}
+img.skills { width: 10em; transform: translateY(-1.5em);}
 
 h1, h2, h3, p, summary { font-weight: bold; }
 
@@ -147,7 +147,7 @@ button#github { background-color: #5c5c5c; }
 button#github:hover { background-color: #717171; }
 button#twitter { background-color: var(--cyan); }
 button#twitter:hover { background-color: #6beff1; }
-button#email { background-color: var(--yellow); }
+button#email { background-color: #ffd700; }
 button#email:hover { background-color: #f9ff86; }
 
 fieldset { 
@@ -204,13 +204,13 @@ legend {
 }
 
 @media screen and (max-width: 1070px) {
-  div#projects { grid-template-columns: 1fr 1fr; }
+  div#pg { grid-template-columns: 1fr 1fr; }
 }
 @media screen and (max-width: 750px) {
-  div#projects { grid-template-columns: 1fr; }
+  div#pg { grid-template-columns: 1fr; }
 }
 @media screen and (max-width: 580px) {
-  p { text-align: center; }
+  p, summary { text-align: center; }
   p.noCenter { text-align: left; }
   div.info {
     display: flex;

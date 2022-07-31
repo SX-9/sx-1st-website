@@ -1,6 +1,6 @@
 if (window.innerWidth < 380) {
     let answear = prompt("Your Device Is Too Small, Are You Sure You Want To View This Page?\n\nType 'yes' to continue.");
-    if (answear !== "yes") {
+    if (answear.toLowerCase() !== "yes") {
         document.body.style.display = 'none';
     } else {
         document.body.style.display = 'block';
@@ -60,10 +60,6 @@ fetch('https://visitors.sx9.repl.co/').then(res => res.json()).then(data => {
     console.log(err)
     document.getElementById('visits').remove()
 });
-
-document.getElementById('skills').onclick = () => {
-    window.open('https://roadmap.sh/frontend');
-}
 
 document.getElementById('bot').onclick = () => {
     window.open('https://top.gg/bot/889384219678232606');
