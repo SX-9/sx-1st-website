@@ -96,6 +96,9 @@ document.getElementById('share').onclick = () => {
 document.getElementById('pwa').onclick = () => {
     installPrompt();
 }
+document.getElementById('dash').onclick = () => {
+    window.open(`https://github.com/SX-9/pc-web-dash`);
+}
 
 console.log(
     "%cHello%cWorld()", 
