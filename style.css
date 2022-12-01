@@ -73,6 +73,11 @@ div#pg {
   align-items: center;
   margin-bottom: 2em;
 }
+div#skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
 
 img#pfp {
   border-radius: 50%;
