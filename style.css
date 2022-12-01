@@ -198,6 +198,7 @@ legend {
   div#pg { grid-template-columns: 1fr; }
 }
 @media screen and (max-width: 580px) {
+  img.skills { width: 5em; }
   p, summary { text-align: center; }
   p.noCenter { text-align: left; }
   div.info {
