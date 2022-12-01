@@ -1,11 +1,11 @@
 :root {
   color-scheme: dark;
   --cyan: #00e1ff;
-  --green: #5dfd5d;
+  --green: #077278;
 }
 
 body {
-  background-color: #041020;
+  background-color: #043145;
   font-family: 'Raleway', sans-serif;
   background-size: cover;
   background-position: center;
@@ -78,7 +78,6 @@ img#pfp {
   border-radius: 50%;
   width: 5.5em;
   height: 5.5em;
-  background-color: #393939;
 }
 img#pfp:hover { animation: spin 1.5s ease-in-out; }
 img.skills { width: 10em; transform: translateY(-1.5em);}
@@ -92,17 +91,6 @@ p#stats { background-color: #000000; font-weight: 600; padding: 10px; }
 p.border { 
   color: #000;
   text-shadow: 0 0 10px #fff;
-}
-span#pwa {
-  color: #000;
-  text-decoration: underline;
-}
-span#pwa::selection {
-  color: lightskyblue;
-}
-span#pwa:hover {
-  animation: none;
-  font-size: 1em;
 }
 
 span { color: var(--green); font-weight: bolder; }
