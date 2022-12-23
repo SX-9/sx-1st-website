@@ -60,6 +60,6 @@ console.log(
 );
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('pwa/sw.js');
+    navigator.serviceWorker.register('/pwa/sw.js');
     console.log("Service Worker Registered!");
 }

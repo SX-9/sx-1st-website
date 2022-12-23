@@ -31,35 +31,35 @@ div#c3 { height: max-content }
 div#c4 { height: max-content }
 div#c5 { height: 35vh; }
 div#c1.scroll {
-  background: url(images/bg1.jpg);
+  background: url(/images/bg1.jpg);
   background-size: cover; 
   background-position: center;  
   background-repeat: no-repeat;
   background-attachment: fixed; 
 }
 div#c2.scroll {
-  background: url(images/bg2.jpg);
+  background: url(/images/bg2.jpg);
   background-size: cover; 
   background-position: center;  
   background-repeat: no-repeat;
   background-attachment: fixed; 
 }
 div#c3.scroll {
-  background: url(images/bg3.jpg);
+  background: url(/images/bg3.jpg);
   background-size: cover; 
   background-position: center;  
   background-repeat: no-repeat;
   background-attachment: fixed; 
 }
 div#c4.scroll {
-  background: url(images/bg4.jpg);
+  background: url(/images/bg4.jpg);
   background-size: cover; 
   background-position: center;  
   background-repeat: no-repeat; 
   background-attachment: fixed;
 }
 div#c5.scroll {
-  background: url(images/bg5.jpg);
+  background: url(/images/bg5.jpg);
   background-size: cover; 
   background-position: center;  
   background-repeat: no-repeat; 
