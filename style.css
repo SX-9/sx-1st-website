@@ -2,11 +2,12 @@
   color-scheme: dark;
   --cyan: #00e1ff;
   --green: #63cfae;
+  --font: 'Raleway', sans-serif;
 }
 
 body {
   background-color: #043145;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -111,6 +112,7 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  font-family: var(--font);
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
