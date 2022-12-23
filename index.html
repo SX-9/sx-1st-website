@@ -1,144 +1,97 @@
 <!DOCTYPE html>
 <html prefix="og: https://ogp.me/ns#" lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta property="og:title" content="SX's Website"/>
-		<meta property="og:url" content="https://sx9.is-a.dev/"/>
-		<meta property="og:description" content="Hi, Im SX! Wanna Code?"/>
-		<meta property="og:image" content="https://sx9.is-a.dev/images/avatar.png"/>
-		<meta name="theme-color" content="#00e1ff">
-		<meta property="og:type" content="website"/>
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:site" content="@SX_Discord">
-		<meta name="twitter:title" content="SX's Website">
-		<meta name="twitter:description" content="Hi, Im SX! Wanna Code?">
-		<meta name="twitter:image" content="https://sx9.is-a.dev/images/avatar.png">
-		<meta property="keywords" content="sx spy agent">
-		<link rel="stylesheet" href="style.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-	        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-		<link rel="manifest" href="pwa/manifest.json">
-		<title>SX's Website</title>
-		<link rel="icon" href="images/avatar.png">
-	</head>
-	<body>
-		<div class="container" id="c1">
-			<div class="info">
-				<img loading="lazy" id="pfp" src="images/avatar.png" alt="SX's Avatar">
-				<h1>SX Spy Agent</h1>
-				<p class="border">Hi, Im A <span id="typing">Developer</span>!</p>
-				<p class="border" id="visits">You Are The <span id="counter"></span> Visitor!</p>
-			</div>
-		</div>
-		<h3>Scroll Down To See More!</h3>
-		<div class="container" id="c2">
-		    <div class="info">
-				<h2>About Me</h2>
-				<p>
-					I'm A <span>Front-End Developer</span><br>
-					From <span>The Developers Paradise</span>!<br>
-					I Just <span>Like To Code</span> For Fun<br>
-					And Its My <span>Favorite</span> Hobby!<br>
-					I'm Currently <span>Learning Node.Js</span><br>
-					And I Use <span>Arch Linux</span> BTW!
- 				</p>
-			</div>
-		</div>
-		<div class="container" id="c3">
-			<div class="info">
-				<h2>Top Projects</h2>
-				<details id="projects">
-					<summary>Click To Expand</summary>
-					<div id="pg">
-						<fieldset>
-							<legend>AmethystCore - Bot</legend>
-							<p class="noCenter">
-								A Discord Bot With<br>
-								Moderation, Fun Commands,<br>
-								Web Dashboard, And More...<br>
-								(Discontinued)<br>
-							</p>
-						<button id="bot">Add To Your Server!</button>
-						</fieldset>
-						<fieldset>
-							<legend>My Secret App - Web</legend>
-							<p class="noCenter">
-								This Is My Personal Website<br>
-								And It's An Application With<br>
-								Calculator, Games, Clock, And More...<br>
-							</p>
-							<button id="pwa">Add To Home Screen!</button>
-						</fieldset>
-						<fieldset>
-							<legend>X-Cord - Chat</legend>
-							<p class="noCenter">
-								A Small Project With A Simple Chat<br>
-								Using Socket IO And Node.Js,<br>
-								No Sign In Required!<br>
-							</p>
-							<button id="chat">Start Chating!</button>
-						</fieldset>
-						<fieldset>
-							<legend>TheArtAPI - API</legend>
-							<p class="noCenter">
-								Just A Simple Image API<br>
-								Post Your Art To Our API,<br>
-								Try It!<br>
-								(No Longer Avaible)<br>
-							</p>
-							<button id="api">Try It Now!</button>
-						</fieldset>
-						<fieldset>
-							<legend>PC Web Dash - API</legend>
-							<p class="noCenter">
-								Launch A Web Server<br>
-								On Your PC To<br>
-								Monitor Your Performance<br>
-								And See It From Your Phone!<br>
-							</p>
-							<button id="dash">Download Code!</button>
-						</fieldset>
-						<fieldset>
-							<legend>CheckMateOS - Web</legend>
-							<p class="noCenter">
-								A Simple OS<br>
-								Made With Static Files<br>
-								Under 24 Hours!<br>
-							</p>
-							<button id="os">Install It!</button>
-						</fieldset>
-					</div>
-				</details>
-			</div>
-		</div>
-		<div class="container" id="c4">
-			<div class="info">
-				<h2>My Skills</h2>
-				<div id="skills">
-					<img loading="lazy" class="skills" src="images/web.png" alt="Web Dev">
-					<img loading="lazy" class="skills" src="images/node.png" alt="Node JS">
-					<img loading="lazy" class="skills" src="images/bash.png" alt="Bash">
-				</div>
-			</div>
-		</div>
-		<div class="container" id="c5">
-			<div class="info">
-				<h2>Profiles</h2>
-				<div>
-					<button id="discord">Discord</button>
-					<button id="github">GitHub</button>
-					<button id="twitter">Twitter</button>
-					<button id="email">Email</button>
-			    </div>
-		    </div>
-		</div>
-		<button id="share" title="Share On Twitter">
-			<svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">
-				<path d="M 15.990234 1.9902344 A 1.0001 1.0001 0 0 0 15.292969 3.7070312 L 17.585938 6 L 17 6 C 10.936593 6 6 10.936593 6 17 A 1.0001 1.0001 0 1 0 8 17 C 8 12.017407 12.017407 8 17 8 L 17.585938 8 L 15.292969 10.292969 A 1.0001 1.0001 0 1 0 16.707031 11.707031 L 20.707031 7.7070312 A 1.0001 1.0001 0 0 0 20.707031 6.2929688 L 16.707031 2.2929688 A 1.0001 1.0001 0 0 0 15.990234 1.9902344 z M 2.984375 7.9863281 A 1.0001 1.0001 0 0 0 2 9 L 2 19 C 2 20.64497 3.3550302 22 5 22 L 19 22 C 20.64497 22 22 20.64497 22 19 L 22 18 A 1.0001 1.0001 0 1 0 20 18 L 20 19 C 20 19.56503 19.56503 20 19 20 L 5 20 C 4.4349698 20 4 19.56503 4 19 L 4 9 A 1.0001 1.0001 0 0 0 2.984375 7.9863281 z"/>
-			</svg>	
-		</button>
-		<script src="life.js"></script>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="SX's Website" />
+    <meta property="og:url" content="https://sx9.is-a.dev/" />
+    <meta property="og:description" content="Hi, Im SX! Wanna Code?" />
+    <meta property="og:image" content="https://sx9.is-a.dev/images/avatar.png" />
+    <meta name="theme-color" content="#00e1ff">
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@SX_Discord">
+    <meta name="twitter:title" content="SX's Website">
+    <meta name="twitter:description" content="Hi, Im SX! Wanna Code?">
+    <meta name="twitter:image" content="https://sx9.is-a.dev/images/avatar.png">
+    <meta property="keywords" content="sx spy agent">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="manifest" href="pwa/manifest.json">
+    <title>SX's Website</title>
+    <link rel="icon" href="images/avatar.png">
+</head>
+<body>
+    <div class="container" id="c1">
+        <div class="info">
+            <img loading="lazy" id="pfp" src="images/avatar.png" alt="SX's Avatar">
+            <h1>SX Spy Agent</h1>
+            <p class="border">
+                Hi, Im A <span id="typing">Developer</span>!
+            </p>
+            <p class="border" id="visits">
+                You Are The <span id="counter"></span> Visitor!
+            </p>
+        </div>
+    </div>
+    <h3>Scroll Down To See More!</h3>
+    <div class="container" id="c2">
+        <div class="info">
+            <h2>About Me</h2>
+            <p>
+                I'm A <span>Front-End Developer</span><br>
+                From <span>The Developers Paradise</span>!<br>
+                I Just <span>Like To Code</span> For Fun<br>
+                And Its My <span>Favorite</span> Hobby!<br>
+                I'm Currently <span>Learning Node.Js</span><br>
+                And I Use <span>Arch Linux</span> BTW!
+            </p>
+        </div>
+    </div>
+    <div class="container" id="c3">
+        <div class="info">
+            <h2>Coding Stats</h2>
+            <div id="pg">
+                <fieldset>
+                    <legend>Github Stats</legend>
+                    <img class="stats" loading="lazy" src="https://github-readme-stats.vercel.app/api?username=SX-9&count_private=true&show_icons=true&theme=tokyonight&hide_border=true&border_radius=20&text_bold=true&hide_title=true">
+                </fieldset>
+                <fieldset>
+                    <legend>Top Languages</legend>
+                    <img class="stats" loading="lazy" src="https://github-readme-stats.vercel.app/api/top-langs?username=SX-9&count_private=true&show_icons=true&theme=tokyonight&hide_border=true&border_radius=20&text_bold=true&hide_title=true">
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="c4">
+        <div class="info">
+            <h2>My Skills</h2>
+            <div id="skills">
+                <img loading="lazy" class="skills" src="images/web.png" alt="Web Dev">
+                <img loading="lazy" class="skills" src="images/node.png" alt="Node JS">
+                <img loading="lazy" class="skills" src="images/bash.png" alt="Bash">
+            </div>
+        </div>
+    </div>
+    <div class="container" id="c5">
+        <div class="info">
+            <h2>Profiles</h2>
+            <div>
+                <button id="discord">Discord</button>
+                <button id="github">GitHub</button>
+                <button id="twitter">Twitter</button>
+                <button id="email">Email</button>
+            </div>
+        </div>
+    </div>
+    <button id="pwa" title="Add To Home Screen">
+        Install
+    </button>
+    <button id="share" title="Share On Twitter">
+        Tweet
+    </button>
+    <script src="life.js"></script>
+</body>
 </html>

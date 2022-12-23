@@ -25,11 +25,11 @@ div.container {
   justify-content: center;
   opacity: 0;
 }
-div#c1 { height: 90vh; }
+div#c1 { height: 83vh; }
 div#c2 { height: 70vh; }
 div#c3 { height: max-content }
 div#c4 { height: max-content }
-div#c5 { height: 40vh; }
+div#c5 { height: 35vh; }
 div#c1.scroll {
   background: url(images/bg1.jpg);
   background-size: cover; 
@@ -66,14 +66,9 @@ div#c5.scroll {
   background-attachment: fixed;
 }
 div.scroll { animation: fadeIn 2.5s ease-in-out forwards; }
-details#projects { 
-  width: 90vw;
-  margin-bottom: 2em; 
-}
 div#pg { 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1em;
+  display: flex;
+  gap: 1em;
   justify-content: center;
   align-items: center;
   margin-bottom: 2em;
@@ -81,7 +76,7 @@ div#pg {
 div#skills {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1em;
+  gridgap: 1em;
 }
 
 img#pfp {
@@ -91,6 +86,7 @@ img#pfp {
 }
 img#pfp:hover { animation: spin 1.5s ease-in-out; }
 img.skills { width: 10em; transform: translateY(-1.5em);}
+img.stats { width: 97%; }
 
 h1, h2, h3, p, summary { font-weight: bold; }
 
@@ -104,7 +100,7 @@ p.border {
 }
 
 span { color: var(--green); font-weight: bolder; }
-span:hover { animation: smallToBig 1s ease-in-out; font-size: 2em; }
+span:hover { animation: smallToBig 1s ease-in-out; font-size: 1.2em; }
 
 button {
   border: none;
@@ -122,20 +118,25 @@ button {
 button:hover { 
   background-color: #7e7e7e;
   animation: buttonHover 0.5s ease-in-out;
-  transform: translateY(-10px);
 }
 
-button#share {
-  width: 3em;
+button#share, button#pwa {
+  font-size: 1em;
   height: 3em;
-  border-radius: 50%;
+  border-radius: 10%;
+  background-color: var(--green);
+}
+button#share {
   position: fixed;
   bottom: 1em;
   right: 1em;
-  background-color: var(--green);
 }
-button#share:hover { background-color: #6bf172; }
-button#share::before { content: ""; }
+button#pwa {
+  position: fixed;
+  bottom: 1em;
+  right: 5.2em;
+}
+button#share::before, button#pwa::before { content: ""; }
 
 button::before { content: "➤ "; color: white; }
 button:hover:before { color: #dcdcdc; }
@@ -153,9 +154,7 @@ fieldset {
   border-radius: 5px;
   background-color: #000000;
   padding: 10px;
-  width: 20em;
-  min-height: 17em;
-  margin: 0 auto;
+  margin: 10px;
 }
 legend { 
   color: var(--green);
@@ -193,24 +192,20 @@ legend {
 
 @keyframes smallToBig {
   from { font-size: 1em; }
-  to { font-size: 2em; }
+  to { font-size: 1.2em; }
 }
 
 @keyframes buttonHover {
-  from { transform: translateY(0); }
-  to { transform: translateY(-10px); }
+  0% { transform: translateY(0); }
+  25% { transform: translateY(10px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
 }
 
-@media screen and (max-width: 1070px) {
-  div#pg { grid-template-columns: 1fr 1fr; }
-}
-@media screen and (max-width: 750px) {
-  div#pg { grid-template-columns: 1fr; }
-}
+@media screen and (max-width: 750px) { div#pg { display: block; } }
 @media screen and (max-width: 580px) {
   img.skills { width: 5em; }
-  p, summary { text-align: center; }
-  p.noCenter { text-align: left; }
+  p { text-align: center; }
   div.info {
     display: flex;
     flex-direction: column;
