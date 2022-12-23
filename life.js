@@ -50,7 +50,7 @@ document.getElementById('email').onclick = () => window.open('mailto:hello@mail.
 document.getElementById('discord').onclick = () => window.open('https://discord.st/sx-aircraft');
 document.getElementById('github').onclick = () => window.open('https://github.com/SX-9');
 document.getElementById('twitter').onclick = () => window.open('https://twitter.com/SX_Disord');
-document.getElementById('share').onclick = window.open("https://twitter.com/share?url=" + window.location.href);
+document.getElementById('share').onclick = () => window.open("https://twitter.com/share?url=" + window.location.href);
 document.getElementById('pwa').onclick = install.prompt;
 
 console.log(
