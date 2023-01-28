@@ -51,26 +51,14 @@ document.querySelectorAll("button").forEach(glitch);
 const typingChange = () => {
   const typing = document.getElementById("typing");
   setTimeout(() => (typing.innerText = "Developer"), 500);
-  setTimeout(() => (typing.innerText = "Tech Enthusist"), 1500);
+  setTimeout(() => (typing.innerText = "Tech Lover"), 1500);
   setTimeout(() => (typing.innerText = "Cat Lover"), 2500);
-  setTimeout(() => (typing.innerText = "Fake Hacker"), 3500);
-  setTimeout(() => (typing.innerText = "Arch User"), 4500);
-  setTimeout(() => (typing.innerText = "Secret Agent"), 5500);
+  setTimeout(() => (typing.innerText = "Arch User"), 3500);
+  setTimeout(() => (typing.innerText = "Secret Agent"), 4500);
 };
 
 typingChange();
 setInterval(typingChange, 7000);
-
-fetch("https://visitors.sx9.repl.co/")
-  .then((res) => res.json())
-  .then((data) => {
-    console.log(data);
-    document.getElementById("counter").innerText = data.visits + "th";
-  })
-  .catch((err) => {
-    console.log(err);
-    document.getElementById("visits").remove();
-  });
 
 document.getElementById("email").onclick = () =>
   window.open("mailto:hello@mail.sx9.is-a.dev");

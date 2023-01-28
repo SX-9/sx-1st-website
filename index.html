@@ -28,17 +28,14 @@
     <div class="container" id="c1">
         <div class="info">
             <img loading="lazy" id="pfp" src="/images/avatar.png" alt="SX's Avatar">
+            <h5>$ whoami</h5>
             <h1 class="glitch" data-value="SX Spy Agent">SX Spy Agent</h1>
-            <p>
-                Hi, Im A <span id="typing">Developer</span>!
-            </p>
-            <p id="visits">
-                You Are The <span id="counter"></span> Visitor!
-            </p>
+            <p>Hi, Im A <span id="typing">...</span>!</p>
         </div>
     </div>
     <div class="container" id="c2">
         <div class="info">
+            <h5>$ cat about.txt</h5>
             <h2 class="glitch" data-value="About Me">About Me</h2>
             <p>
                 I'm A <span>Front-End Developer</span><br>
@@ -50,8 +47,10 @@
             </p>
         </div>
     </div>
+    <div class="spacer"></div>
     <div class="container" id="c3">
         <div class="info">
+            <h5>$ curl https://github.com</h5>
             <h2 class="glitch" data-value="Coding Stats">Coding Stats</h2>
             <div id="pg">
                 <fieldset>
@@ -65,22 +64,25 @@
             </div>
         </div>
     </div>
+    <div class="spacer"></div>
     <div class="container" id="c4">
         <div class="info">
+            <h5>$ grep sx9dev</h5>
             <h2 class="glitch" data-value="Profiles">Profiles</h2>
-            <div>
-                <button id="discord">Discord</button>
-                <button id="github">GitHub</button>
-                <button id="twitter">Twitter</button>
-                <button id="email">Email</button>
+            <div id="buttons">
+                <button data-value="Discord" id="discord">Discord</button>
+                <button data-value="Github" id="github">GitHub</button>
+                <button data-value="Twitter" id="twitter">Twitter</button>
+                <button data-value="Email" id="email">Email</button>
             </div>
+            <h5>$ exit</h5>
         </div>
     </div>
-    <div id="spacer"></div>
-    <button id="pwa" title="Add To Home Screen">
+    <div class="spacer"></div>
+    <button data-value="Install" id="pwa" title="Add To Home Screen">
         Install
     </button>
-    <button id="share" title="Share On Twitter">
+    <button data-value="Tweet" id="share" title="Share On Twitter">
         Tweet
     </button>
     <script src="life.js"></script>

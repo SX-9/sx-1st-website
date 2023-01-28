@@ -2,7 +2,7 @@
   color-scheme: dark;
   --color1: #00e1ff94;
   --color2: #c74b4b94;
-  --load: glow 500ms infinite;
+  --load: glow 500ms ease;
   --font: 'Space Mono', monospace;
 }
 
@@ -13,9 +13,8 @@ body {
   animation: var(--load);
   font-family: var(--font);
   font-weight: bold;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: var(--color1);
+  overflow-x: hidden;
   height: 50em;
   color: white;
 }
@@ -47,6 +46,7 @@ div.container {
   align-items: center;
   justify-content: center;
 }
+div#c1 > div.info { width: 22em; }
 div#c4 { height: 40%; }
 div#pg { 
   display: flex;
@@ -55,20 +55,27 @@ div#pg {
   align-items: center;
   margin-bottom: 2em;
 }
-div#spacer {
+div.spacer {
   height: 3em;
 }
+div#buttons {
+  display: flex;
+}
+
 img#pfp {
   border: var(--color1) solid;
   border-radius: 50%;
   width: 5.5em;
   height: 5.5em;
 }
-img#pfp:hover { animation: spin 1.5s ease-in-out; }
+img#pfp:hover { animation: spin 1.5s infinite; }
 img.stats { width: 97%; }
 
 h1, h2, h3, p { font-weight: bold; }
-
+h5 {
+  margin-bottom: 0;
+  color: #ffffff9d;
+}
 h3 { 
   filter: none;
   -webkit-filter: none;
@@ -84,7 +91,7 @@ p, h1, h2, legend, button {
 }
 
 span { color: var(--color2); font-weight: bolder; }
-span:hover { animation: smallToBig 1s ease-in-out; font-size: 1.2em; }
+span:hover { animation: hover 1s ease; background: #68686881; }
 
 button {
   border: none;
@@ -176,9 +183,9 @@ legend {
   to { transform: rotate(360deg); }
 }
 
-@keyframes smallToBig {
-  from { font-size: 1em; }
-  to { font-size: 1.2em; }
+@keyframes hover {
+  from { background: none; }
+  to { background: #68686881; }
 }
 
 @keyframes buttonHover {
@@ -189,14 +196,11 @@ legend {
 }
 
 @keyframes glow {
-  100% {
+  from {
     background: #2e2e2e;
   }
-  50% {
-    background: #3f3f3f;
-  }
-  0% {
-    background: #2e2e2e;
+  to {
+    background: var(--color1);
   }
 }
 
