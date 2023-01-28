@@ -108,7 +108,8 @@ button:hover {
 button#share, button#pwa {
   font-size: 1em;
   height: 3em;
-  border-radius: 10%;
+  padding: 14px;
+  border-radius: 2rem;
   background-color: var(--color2);
 }
 button#share {
@@ -119,7 +120,7 @@ button#share {
 button#pwa {
   position: fixed;
   bottom: 1em;
-  left: 5.5em;
+  left: 6em;
 }
 button#share::before, button#pwa::before { content: ""; }
 
