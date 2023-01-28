@@ -1,13 +1,18 @@
 :root {
   color-scheme: dark;
-  --cyan: #00e1ff;
-  --green: #63cfae;
-  --font: 'Raleway', sans-serif;
+  --color1: #00e1ff94;
+  --color2: #c74b4b94;
+  --load: glow 500ms infinite;
+  --font: 'Space Mono', monospace;
 }
 
+/* * { border: 1px solid #fff; } */
+
 body {
-  background-color: #043145;
+  scroll-behavior: smooth;
+  animation: var(--load);
   font-family: var(--font);
+  font-weight: bold;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -15,58 +20,34 @@ body {
   color: white;
 }
 
+div#background {
+  background: linear-gradient(
+    #16332fb3, 
+    #331616b3
+  ), url(/images/bg1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(1em);
+  -webkit-filter: blur(1em);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 div.container {
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  opacity: 0;
 }
-div#c1 { height: 83vh; }
-div#c2 { height: 70vh; }
-div#c3 { height: max-content }
-div#c4 { height: max-content }
-div#c5 { height: 35vh; }
-div#c1.scroll {
-  background: url(/images/bg1.jpg);
-  background-size: cover; 
-  background-position: center;  
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-}
-div#c2.scroll {
-  background: url(/images/bg2.jpg);
-  background-size: cover; 
-  background-position: center;  
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-}
-div#c3.scroll {
-  background: url(/images/bg3.jpg);
-  background-size: cover; 
-  background-position: center;  
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-}
-div#c4.scroll {
-  background: url(/images/bg4.jpg);
-  background-size: cover; 
-  background-position: center;  
-  background-repeat: no-repeat; 
-  background-attachment: fixed;
-}
-div#c5.scroll {
-  background: url(/images/bg5.jpg);
-  background-size: cover; 
-  background-position: center;  
-  background-repeat: no-repeat; 
-  background-attachment: fixed;
-}
-div.scroll { animation: fadeIn 2.5s ease-in-out forwards; }
+div#c4 { height: 40%; }
 div#pg { 
   display: flex;
   gap: 1em;
@@ -74,33 +55,35 @@ div#pg {
   align-items: center;
   margin-bottom: 2em;
 }
-div#skills {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gridgap: 1em;
+div#spacer {
+  height: 3em;
 }
-
 img#pfp {
+  border: var(--color1) solid;
   border-radius: 50%;
   width: 5.5em;
   height: 5.5em;
 }
 img#pfp:hover { animation: spin 1.5s ease-in-out; }
-img.skills { width: 10em; transform: translateY(-1.5em);}
 img.stats { width: 97%; }
 
-h1, h2, h3, p, summary { font-weight: bold; }
+h1, h2, h3, p { font-weight: bold; }
 
-h3 { text-align: center; color: var(--green); font-size: 1.7em;}
-h1 { color: var(--cyan); margin: 10px; }
+h3 { 
+  filter: none;
+  -webkit-filter: none;
+  text-align: center; 
+  color: var(--color1); 
+  font-size: 1.7em;
+}
+h1 { color: var(--color1); margin: 10px; }
 p { margin: 10px; font-size: 1.5em; }
 p#stats { background-color: #000000; font-weight: 600; padding: 10px; }
-p.border { 
-  color: #000;
-  text-shadow: 0 0 10px #fff;
+p, h1, h2, legend, button {
+  text-shadow: 0 0 10px #000;
 }
 
-span { color: var(--green); font-weight: bolder; }
+span { color: var(--color2); font-weight: bolder; }
 span:hover { animation: smallToBig 1s ease-in-out; font-size: 1.2em; }
 
 button {
@@ -126,17 +109,17 @@ button#share, button#pwa {
   font-size: 1em;
   height: 3em;
   border-radius: 10%;
-  background-color: var(--green);
+  background-color: var(--color2);
 }
 button#share {
   position: fixed;
   bottom: 1em;
-  right: 1em;
+  left: 1em;
 }
 button#pwa {
   position: fixed;
   bottom: 1em;
-  right: 5.2em;
+  left: 5.5em;
 }
 button#share::before, button#pwa::before { content: ""; }
 
@@ -159,7 +142,7 @@ fieldset {
   margin: 10px;
 }
 legend { 
-  color: var(--green);
+  color: var(--color1);
   font-weight: bold;
   font-size: 1.5em;
 }
@@ -167,7 +150,7 @@ legend {
 ::-webkit-scrollbar { width: 15px; }
 ::-webkit-scrollbar-track {
   background: #303030;
-  border: 2px solid var(--green);
+  border: 2px solid var(--color1);
 }
 ::-webkit-scrollbar-thumb {
   background: #404040;
@@ -202,6 +185,18 @@ legend {
   25% { transform: translateY(10px); }
   50% { transform: translateY(-5px); }
   100% { transform: translateY(0); }
+}
+
+@keyframes glow {
+  100% {
+    background: #2e2e2e;
+  }
+  50% {
+    background: #3f3f3f;
+  }
+  0% {
+    background: #2e2e2e;
+  }
 }
 
 @media screen and (max-width: 750px) { div#pg { display: block; } }
