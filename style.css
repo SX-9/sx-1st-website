@@ -6,9 +6,15 @@
   --font: 'Space Mono', monospace;
 }
 
-/* * { border: 1px solid #fff; } */
+ /* * { border: 1px solid #fff; }  */
 
 body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1em;
+  padding: 3em;
+  padding-bottom: 0;
   scroll-behavior: smooth;
   animation: var(--load);
   font-family: var(--font);
@@ -40,14 +46,15 @@ div.container {
   top: 0;
   left: 0;
   width: 100%;
-  height: 70%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 div#c1 > div.info { width: 22em; }
-div#c4 { height: 40%; }
+div#c3 { height: 80%; }
+div#c4 { height: 60%; }
 div#pg { 
   display: flex;
   gap: 1em;
@@ -56,6 +63,7 @@ div#pg {
   margin-bottom: 2em;
 }
 div.spacer {
+  display: none;
   height: 3em;
 }
 div#buttons {
@@ -69,7 +77,10 @@ img#pfp {
   height: 5.5em;
 }
 img#pfp:hover { animation: spin 1.5s infinite; }
-img.stats { width: 97%; }
+img.stats { width: 100%; }
+button > img {
+  width: 2em;
+}
 
 h1, h2, h3, p { font-weight: bold; }
 h5 {
@@ -83,6 +94,7 @@ h3 {
   color: var(--color1); 
   font-size: 1.7em;
 }
+h2 { color: var(--color1); font-size: 2em; }
 h1 { color: var(--color1); margin: 10px; }
 p { margin: 10px; font-size: 1.5em; }
 p#stats { background-color: #000000; font-weight: 600; padding: 10px; }
@@ -114,7 +126,6 @@ button:hover {
 
 button#share, button#pwa {
   font-size: 1em;
-  height: 3em;
   padding: 14px;
   border-radius: 2rem;
   background-color: var(--color2);
@@ -129,9 +140,9 @@ button#pwa {
   bottom: 1em;
   left: 6em;
 }
-button#share::before, button#pwa::before { content: ""; }
 
 button::before { content: "➤ "; color: white; }
+button#share::before, button#pwa::before { content: ""; }
 button:hover:before { color: #dcdcdc; }
 button#discord { background-color: #7d4fe7; }
 button#discord:hover { background-color: #8468c5; }
@@ -150,7 +161,7 @@ fieldset {
   margin: 10px;
 }
 legend { 
-  color: var(--color1);
+  color: var(--color2);
   font-weight: bold;
   font-size: 1.5em;
 }
@@ -204,8 +215,17 @@ legend {
   }
 }
 
-@media screen and (max-width: 750px) { div#pg { display: block; } }
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 900px) {
+  div#pg {
+    display: block;
+  }
+  body {
+    display: block;
+    padding: 0;
+  }
+  spacer {
+    display: block;
+  }
   img.skills { width: 5em; }
   p { text-align: center; }
   div.info {

@@ -1,8 +1,8 @@
 if (window.innerWidth < 380) {
-  let answear = prompt(
-    "Your Device Is Too Small, Are You Sure You Want To View This Page?\n\nType 'yes' to continue."
+  let answear = confirm(
+    "Your Device Is Too Small, Are You Sure You Want To View This Page?"
   );
-  if (answear.toLowerCase() !== "yes") {
+  if (!answear) {
     document.body.style.display = "none";
   } else {
     document.body.style.display = "block";
@@ -46,19 +46,6 @@ function glitch(el) {
   };
 }
 document.querySelectorAll(".glitch").forEach(glitch);
-document.querySelectorAll("button").forEach(glitch);
-
-function makeid(length) {
-  let result = '';
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+×=/_!@#$%^&*()-":;,?`~\|<>{}[]';
-  const charactersLength = characters.length;
-  let counter = 0;
-  while (counter < length) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    counter += 1;
-  }
-  return result;
-}
 
 const typingChange = () => {
   const typing = document.getElementById("typing");
