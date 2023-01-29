@@ -70,8 +70,11 @@ div#buttons {
   display: flex;
 }
 
+img#pfp.offline { border: .3em grey solid }
+img#pfp.online { border: .3em lime solid }
+img#pfp.dnd { border: .3em red solid }
+img#pfp.idle { border: .3em yellow solid }
 img#pfp {
-  border: var(--color1) solid;
   border-radius: 50%;
   width: 5.5em;
   height: 5.5em;

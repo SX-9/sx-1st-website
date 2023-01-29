@@ -15,10 +15,12 @@ window.addEventListener("beforeinstallprompt", (e) => {
   install = e;
 });
 
+fetch('https://api.lanyard.rest/v1/users/882595027132493864').then(r => r.json()).then(j => {
+  document.getElementById('pfp').classList.add(j.data.discord_status);
+});
+
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
 let interval = null;
-
 function glitch(el) {
   el.onmouseover = (event) => {
     let iteration = 0;
