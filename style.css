@@ -79,7 +79,7 @@ img#pfp {
 img#pfp:hover { animation: spin 1.5s infinite; }
 img.stats { width: 100%; }
 button > img {
-  width: 2em;
+  width: 1.5em;
 }
 
 h1, h2, h3, p { font-weight: bold; }
@@ -103,7 +103,13 @@ p, h1, h2, legend, button {
 }
 
 span { color: var(--color2); font-weight: bolder; }
-span:hover { animation: hover 1s ease; background: #68686881; }
+span:hover {
+  animation: hover 1s ease;
+  background: #68686881;
+  padding: .2em;
+  padding-left: .4em;
+  padding-right: .4em;
+}
 
 button {
   border: none;
@@ -127,7 +133,7 @@ button:hover {
 button#share, button#pwa {
   font-size: 1em;
   padding: 14px;
-  border-radius: 2rem;
+  border-radius: 1em;
   background-color: var(--color2);
 }
 button#share {
@@ -138,7 +144,7 @@ button#share {
 button#pwa {
   position: fixed;
   bottom: 1em;
-  left: 6em;
+  left: 5em;
 }
 
 button::before { content: "➤ "; color: white; }
@@ -169,11 +175,12 @@ legend {
 ::-webkit-scrollbar { width: 15px; }
 ::-webkit-scrollbar-track {
   background: #303030;
-  border: 2px solid var(--color1);
+  border: 1px solid var(--color1);
+  border-radius: 20px;
 }
 ::-webkit-scrollbar-thumb {
   background: #404040;
-  border: 3px solid #ffffff;
+  border: 2px solid #ffffff56;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover { background: #555; }
@@ -195,8 +202,16 @@ legend {
 }
 
 @keyframes hover {
-  from { background: none; }
-  to { background: #68686881; }
+  from {
+    background: none;
+    padding: 0;
+  }
+  to {
+    background: #68686881;
+    padding: .2em;
+    padding-left: .4em;
+    padding-right: .4em;
+  }
 }
 
 @keyframes buttonHover {
