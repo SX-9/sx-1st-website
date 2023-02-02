@@ -15,9 +15,11 @@ window.addEventListener("beforeinstallprompt", (e) => {
   install = e;
 });
 
-fetch('https://api.lanyard.rest/v1/users/882595027132493864').then(r => r.json()).then(j => {
-  document.getElementById('pfp').classList.add(j.data.discord_status);
-});
+fetch("https://api.lanyard.rest/v1/users/882595027132493864")
+  .then((r) => r.json())
+  .then((j) => {
+    document.getElementById("pfp").classList.add(j.data.discord_status);
+  });
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let interval = null;
@@ -49,26 +51,48 @@ function glitch(el) {
 }
 document.querySelectorAll(".glitch").forEach(glitch);
 
-const typingChange = () => {
-  const typing = document.getElementById("typing");
-  setTimeout(() => (typing.innerText = "Developer"), 500);
-  setTimeout(() => (typing.innerText = "Tech Lover"), 1500);
-  setTimeout(() => (typing.innerText = "Cat Lover"), 2500);
-  setTimeout(() => (typing.innerText = "Arch User"), 3500);
-  setTimeout(() => (typing.innerText = "Secret Agent"), 4500);
+let text = "Developer";
+let delay = 250;
+let i = 1;
+const updateText = function() {
+  document.getElementById('typing').innerText = text.substring(0, i);
+  i++;
+  if (i <= text.length) {
+    setTimeout(updateText, delay);
+  }
 };
+updateText();
 
-typingChange();
-setInterval(typingChange, 7000);
+async function getTopLanguages(username) {
+  const response = await fetch(
+    `https://api.github.com/users/${username}/repos`
+  );
+  const repos = await response.json();
 
-document.getElementById("email").onclick = () =>
-  window.open("mailto:hello@mail.sx9.is-a.dev");
-document.getElementById("discord").onclick = () =>
-  window.open("https://discord.st/sx-aircraft");
-document.getElementById("github").onclick = () =>
-  window.open("https://github.com/SX-9");
-document.getElementById("twitter").onclick = () =>
-  window.open("https://twitter.com/SX_Disord");
+  const langCount = {};
+  repos.forEach((repo) => {
+    if (repo.language in langCount) {
+      langCount[repo.language]++;
+    } else {
+      langCount[repo.language] = 1;
+    }
+  });
+
+  const sortedLangs = Object.entries(langCount)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 5);
+
+  let num = 0;
+  sortedLangs.forEach(lang => {
+    num++;
+    let el = document.createElement('p');
+    el.innerText = `${num}. ${lang[0]} - ${lang[1]} Repos`;
+    el.classList.add('stats');
+    document.getElementById('stats').appendChild(el);
+  });
+}
+getTopLanguages('SX-9');
+
 document.getElementById("share").onclick = () =>
   window.open("https://twitter.com/share?url=" + window.location.href);
 document.getElementById("pwa").onclick = install.prompt;
