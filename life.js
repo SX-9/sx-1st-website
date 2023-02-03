@@ -5,6 +5,12 @@ function gtag(){
 gtag('js', new Date());
 gtag('config', 'G-2FTPXFSTQQ');
 
+const f = new Intl.NumberFormat('en-US', { notation: 'compact' });
+
+function cb(response) {
+  document.getElementById('visits').innerText = response.value; //f.format(response.value);
+}
+
 if (window.innerWidth < 380) {
   let answear = confirm(
     "Your Device Is Too Small, Are You Sure You Want To View This Page?"
@@ -24,9 +30,9 @@ window.addEventListener("beforeinstallprompt", (e) => {
 
 fetch("https://api.lanyard.rest/v1/users/882595027132493864")
   .then((r) => r.json())
-  .then((j) => {
-    document.getElementById("pfp").classList.add(j.data.discord_status);
-  });
+  .then((j) =>
+    document.getElementById("pfp").classList.add(j.data.discord_status)
+  );
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let interval = null;
