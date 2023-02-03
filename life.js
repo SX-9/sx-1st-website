@@ -93,8 +93,19 @@ async function getTopLanguages(username) {
 }
 getTopLanguages('SX-9');
 
-document.getElementById("share").onclick = () =>
-  window.open("https://twitter.com/share?url=" + window.location.href);
+document.getElementById("share").onclick = () => {
+  if (navigator.share) {
+    navigator.share({
+      title: 'SX's Website',
+      text: 'Hi, Im SX! Wanna Code?',
+      url: window.location.href,
+    })
+      .then(() => console.log('Sharing succeeded.'))
+      .catch((error) => console.log('Sharing failed:', error));
+  } else {
+    window.open("https://twitter.com/share?url=" + window.location.href);
+  }
+}
 document.getElementById("pwa").onclick = install.prompt;
 
 document.getElementById("up").onclick = () => {
