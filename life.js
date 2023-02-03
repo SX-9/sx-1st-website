@@ -70,6 +70,17 @@ const updateText = function() {
 };
 setTimeout(updateText, 1700);
 
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('scroll');
+    } else {
+      entry.target.classList.remove('scroll');
+    }
+  });
+});
+document.querySelectorAll('.item').forEach(el => observer.observe(el));
+
 async function getTopLanguages(username) {
   const response = await fetch(
     `https://api.github.com/users/${username}/repos`
