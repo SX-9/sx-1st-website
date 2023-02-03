@@ -96,7 +96,7 @@ getTopLanguages('SX-9');
 document.getElementById("share").onclick = () => {
   if (navigator.share) {
     navigator.share({
-      title: 'SX's Website',
+      title: 'SX\'s Website',
       text: 'Hi, Im SX! Wanna Code?',
       url: window.location.href,
     })
