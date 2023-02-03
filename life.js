@@ -132,11 +132,6 @@ document.getElementById("pwa").onclick = () => {
   }
 };
 
-document.getElementById("up").onclick = () => {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-};
-
 console.log(
   "%cHello%cWorld()",
   "color: cyan; background-color: black; font-family: sans-serif; font-weight: bold;",
