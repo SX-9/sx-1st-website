@@ -133,9 +133,9 @@ document.getElementById("pwa").onclick = () => {
 };
 
 console.log(
-  "%cHello%cWorld()",
-  "color: cyan; background-color: black; font-family: sans-serif; font-weight: bold;",
-  "color:red; background-color: white; font-family: sans-serif; font-weight: bold;"
+  "%cHello%cWorld",
+  "color: cyan; background-color: black; font-family: sans-serif; font-weight: bold; font-size: 5em;",
+  "color:red; background-color: white; font-family: sans-serif; font-weight: bold; font-size: 5em;"
 );
 
 if ("serviceWorker" in navigator) {
