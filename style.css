@@ -71,8 +71,13 @@ div.spacer {
 div#buttons {
   display: flex;
 }
+
+.item {
+  opacity: 0;
+}
 .item.scroll {
   animation: scroll 700ms ease-out;
+  opacity: 1;
 }
 
 img#pfp.offline { --status: grey }
