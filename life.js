@@ -113,7 +113,13 @@ document.getElementById("share").onclick = () => {
     window.open("https://twitter.com/share?url=" + window.location.href);
   }
 }
-document.getElementById("pwa").onclick = install.prompt;
+document.getElementById("pwa").onclick = () => {
+  try {
+    install.prompt();
+  } catch {
+    alert('Click On The 3 Dots In The Upper Right Corner And Click Add To Home Screen');
+  }
+};
 
 document.getElementById("up").onclick = () => {
   document.body.scrollTop = 0;
