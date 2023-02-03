@@ -1,3 +1,10 @@
+window.dataLayer = window.dataLayer || [];
+function gtag(){
+  dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('config', 'G-2FTPXFSTQQ');
+
 if (window.innerWidth < 380) {
   let answear = confirm(
     "Your Device Is Too Small, Are You Sure You Want To View This Page?"
@@ -52,7 +59,7 @@ function glitch(el) {
 document.querySelectorAll(".glitch").forEach(glitch);
 
 let text = "Developer";
-let delay = 250;
+let delay = 150;
 let i = 1;
 const updateText = function() {
   document.getElementById('typing').innerText = text.substring(0, i);
@@ -61,7 +68,7 @@ const updateText = function() {
     setTimeout(updateText, delay);
   }
 };
-updateText();
+setTimeout(updateText, 1700);
 
 async function getTopLanguages(username) {
   const response = await fetch(
