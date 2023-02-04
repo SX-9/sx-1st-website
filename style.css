@@ -72,11 +72,12 @@ div#buttons {
   display: flex;
 }
 
-.item {
-  opacity: 0;
-}
+.item { opacity: 0; }
+.item.scroll { --sa: scroll; }
+p.item.scroll, fieldset.item.scroll, div.item.scroll { --sa: scrollR; }
+h1.item.scroll, h2.item.scroll { --sa: scrollL; }
 .item.scroll {
-  animation: scroll 700ms ease-out;
+  animation: var(--sa) 700ms ease-out;
   opacity: 1;
 }
 
@@ -254,11 +255,33 @@ legend {
 @keyframes scroll {
   from {
     opacity: 0;
-    transform: translateY(1em);
+    transform: translateY(5em);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes scrollR {
+  from {
+    opacity: 0;
+    transform: translateX(5em);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scrollL {
+  from {
+    opacity: 0;
+    transform: translateX(-5em);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
