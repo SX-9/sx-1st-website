@@ -8,7 +8,7 @@
         background-color: black;
         font-family: sans-serif;
         color: #ffffff ;
-        font-size: 1.5em;
+        font-size: xxx-large;
       }
 
       div {
@@ -24,16 +24,15 @@
         justify-content: center;
         align-items: center;
         text-shadow:11px 11px 30px #fff;
-        cursor: url("images/cursor.cur"), default;
       }
     </style>
     <title>Clock</title>
   </head>
   <body>
     <div>
-      <h1 id="DigitalCLOCK"></h1>
+      <h1 id="clock">00:00:00 ?M</h1>
     </div>
-    <script type="text/javascript">
+    <script>
       function showTime(){
         var date = new Date();
         var h = date.getHours();
@@ -55,14 +54,13 @@
         s = (s < 10) ? "0" + s : s;
 
         var time = h + ":" + m + ":" + s + " " + session;
-        document.getElementById("DigitalCLOCK").innerText = time;
-        document.getElementById("DigitalCLOCK").textContent = time;
+        document.getElementById("clock").innerText = time;
 
         setTimeout(showTime, 1000);
 
       }
 
-      showTime();
+      setTimeout(showTime, 1000);
     </script>
   </body>
 </html>
