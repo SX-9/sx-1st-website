@@ -1,7 +1,5 @@
 :root {
   color-scheme: dark;
-  /* --color1: #00e1ff94;
-  --color2: #c74b4b94; */
   --color1: #55d6bedc;
   --color2: #e94f37dc;
   --load: glow 500ms ease;
@@ -255,7 +253,7 @@ legend {
 @keyframes scroll {
   from {
     opacity: 0;
-    transform: translateY(5em);
+    transform: translateY(2em);
   }
   to {
     opacity: 1;
@@ -266,7 +264,7 @@ legend {
 @keyframes scrollR {
   from {
     opacity: 0;
-    transform: translateX(5em);
+    transform: translateX(1em);
   }
   to {
     opacity: 1;
@@ -277,7 +275,7 @@ legend {
 @keyframes scrollL {
   from {
     opacity: 0;
-    transform: translateX(-5em);
+    transform: translateX(-1em);
   }
   to {
     opacity: 1;
@@ -304,3 +302,4 @@ legend {
     align-items: center;
   }
 }
+
