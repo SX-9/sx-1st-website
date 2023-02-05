@@ -7,9 +7,11 @@ gtag('config', 'G-2FTPXFSTQQ');
 
 const f = new Intl.NumberFormat('en-US', { notation: 'compact' });
 
-function cb(response) {
-  document.getElementById('visits').innerText = response.value; //f.format(response.value);
+function updateCount(response) {
+  localStorage.setItem('visited', 'yes')
+  document.getElementById('visits').innerText = f.format(response.value);
 }
+fetch('https://api.countapi.xyz/' + ( localStorage.getItem('visited') === 'yes' ? 'get' : 'hit' ) + '/sx9dev/visits').then(j => j.json()).then(updateCount);
 
 if (window.innerWidth < 380) {
   let answear = confirm(
@@ -64,10 +66,10 @@ function glitch(el) {
 }
 document.querySelectorAll(".glitch").forEach(glitch);
 
-let text = "Developer";
+let text = "Developer🚀";
 let delay = 150;
 let i = 1;
-const updateText = function() {
+const updateText = () => {
   document.getElementById('typing').innerText = text.substring(0, i);
   i++;
   if (i <= text.length) {
