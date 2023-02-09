@@ -13,8 +13,7 @@ function updateCount(response) {
   localStorage.setItem('visited', 'yes')
   document.getElementById('visits').innerText = f.format(response.value);
 }
-fetch('https://api.countapi.xyz/'
-  + (localStorage.getItem('visited') === 'yes' ? 'get' : 'hit') + '/sx9dev/visits')
+fetch('https://api.countapi.xyz/' + (localStorage.getItem('visited') === 'yes' ? 'get' : 'hit') + '/sx9dev/visits')
   .then(j => j.json()).then(updateCount);
 
 if (window.innerWidth < 380) {

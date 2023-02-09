@@ -122,7 +122,7 @@ h2 { color: var(--color1); font-size: 2em; }
 h1 { color: var(--color1); margin: 10px; }
 p { margin: 10px; font-size: 1.5em; }
 p, h1, h2, h4, legend, button {
-  text-shadow: 0 0 10em #000;
+  text-shadow: 0 0 10px #000;
 }
 p.stats { text-align: left; font-size: large; }
 
