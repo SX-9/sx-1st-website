@@ -1,7 +1,7 @@
 // "Hello World!" - sx9dev
 
 window.dataLayer = window.dataLayer || [];
-function gtag(){
+function gtag() {
   dataLayer.push(arguments);
 }
 gtag('js', new Date());
@@ -13,7 +13,9 @@ function updateCount(response) {
   localStorage.setItem('visited', 'yes')
   document.getElementById('visits').innerText = f.format(response.value);
 }
-fetch('https://api.countapi.xyz/' + ( localStorage.getItem('visited') === 'yes' ? 'get' : 'hit' ) + '/sx9dev/visits').then(j => j.json()).then(updateCount);
+fetch('https://api.countapi.xyz/'
+  + (localStorage.getItem('visited') === 'yes' ? 'get' : 'hit') + '/sx9dev/visits')
+  .then(j => j.json()).then(updateCount);
 
 if (window.innerWidth < 380) {
   let answear = confirm(
@@ -32,11 +34,16 @@ window.addEventListener("beforeinstallprompt", (e) => {
   install = e;
 });
 
- fetch("https://api.lanyard.rest/v1/users/882595027132493864")
-   .then((r) => r.json())
-   .then((j) =>
-     document.getElementById("pfp").classList.add(j.data.discord_status)
-   );
+fetch("https://api.lanyard.rest/v1/users/882595027132493864")
+  .then((r) => r.json())
+  .then((j) => {
+    document.getElementById("pfp").classList.add(j.data.discord_status)
+    if (j.data.activities.length === 0) return;
+    j.data.activities.forEach((a) => {
+      a.state = a.state.slice(0, a.state.lastIndexOf(';'));
+      document.getElementById('activity').innerText = `${a.name}\n${a.details}\n${a.state}`;
+    });
+  });
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let interval = null;
@@ -111,6 +118,7 @@ async function getTopLanguages(username) {
     .slice(0, 5);
 
   let num = 0;
+  document.getElementById('stats').innerHTML = '<legend>🤔 Top Languages</legend>';
   sortedLangs.forEach(lang => {
     num++;
     let el = document.createElement('p');
@@ -152,3 +160,26 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/pwa/sw.js");
   console.log("Service Worker Registered!");
 }
+ 
+function getRepos(username) {
+  const response = fetch(
+    `https://api.github.com/users/${username}/repos`
+  );
+  const repos = response.json();
+  repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
+  const sortedRepos = repos.map((repo) => {
+    return {
+      name: repo.name,
+      stars: repo.stargazers_count,
+      description: repo.description,
+    };
+  });
+  sortedRepos.slice(0, 5);
+  return sortedRepos;
+}
+//getRepos('SX-9').forEach(repo => {
+//  let el = document.createElement('div');
+//  el.classList.add('item');
+//  el.innerText = `${repo.name} - ${repo.stars} Stars - ${repo.description}`;
+//  document.getElementById('repos').appendChild(el);
+//});

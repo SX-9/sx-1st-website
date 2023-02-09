@@ -89,15 +89,27 @@ img#pfp {
   width: 5.5em;
   height: 5.5em;
 }
-img#pfp:hover { animation: spin 1.5s infinite; }
 button > img {
   width: 1.5em;
 }
 
-h1, h2, h3, p { font-weight: bold; }
+h1, h2, h3, h4, p { font-weight: bold; }
 h5 {
   margin-bottom: 0;
   color: #ffffff9d;
+}
+h4 {
+  background-color: #0000008a;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  padding: 1em;
+  padding-left: 1em;
+  position: fixed;
+  top: .1em;
+  right: 0;
+  text-align: right;
+  font-size: .7em;
+  overflow: hidden;
 }
 h3 { 
   filter: none;
@@ -109,8 +121,8 @@ h3 {
 h2 { color: var(--color1); font-size: 2em; }
 h1 { color: var(--color1); margin: 10px; }
 p { margin: 10px; font-size: 1.5em; }
-p, h1, h2, legend, button {
-  text-shadow: 0 0 10px #000;
+p, h1, h2, h4, legend, button {
+  text-shadow: 0 0 10em #000;
 }
 p.stats { text-align: left; font-size: large; }
 
@@ -214,11 +226,6 @@ legend {
     opacity: 1; 
     transform: translateY(0px);
   }
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 @keyframes hover {
