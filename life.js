@@ -39,10 +39,9 @@ fetch("https://api.lanyard.rest/v1/users/882595027132493864")
   .then((j) => {
     document.getElementById("pfp").classList.add(j.data.discord_status)
     if (j.data.activities.length === 0) return;
-    j.data.activities.forEach((a) => {
-      a.state = a.state.slice(0, a.state.lastIndexOf(';'));
-      document.getElementById('activity').innerText = `${a.name}\n${a.details}\n${a.state}`;
-    });
+    let a = j.data.activities[0];
+    a.state = a.state.slice(0, a.state.lastIndexOf(';'));
+    document.getElementById('activity').innerText = `${a.name}\n${a.details}\n${a.state}`;
   });
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -160,26 +159,3 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/pwa/sw.js");
   console.log("Service Worker Registered!");
 }
- 
-function getRepos(username) {
-  const response = fetch(
-    `https://api.github.com/users/${username}/repos`
-  );
-  const repos = response.json();
-  repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
-  const sortedRepos = repos.map((repo) => {
-    return {
-      name: repo.name,
-      stars: repo.stargazers_count,
-      description: repo.description,
-    };
-  });
-  sortedRepos.slice(0, 5);
-  return sortedRepos;
-}
-//getRepos('SX-9').forEach(repo => {
-//  let el = document.createElement('div');
-//  el.classList.add('item');
-//  el.innerText = `${repo.name} - ${repo.stars} Stars - ${repo.description}`;
-//  document.getElementById('repos').appendChild(el);
-//});
