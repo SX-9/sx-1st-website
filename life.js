@@ -120,6 +120,7 @@ async function getTopLanguages(username) {
   let num = 0;
   document.getElementById('stats').innerHTML = '<legend>🤔 Top Languages</legend>';
   sortedLangs.forEach(lang => {
+    if (lang[0] === 'null') return;
     num++;
     let el = document.createElement('p');
     el.innerText = `${num}. ${lang[0]} - ${lang[1]} Repos`;
