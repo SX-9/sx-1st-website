@@ -1,5 +1,7 @@
 // "Hello World!" - sx9dev
 
+if (confirm('I Have A New Site, Wanna See It?')) window.location.href = 'https://new.sx9.is-a.dev/';
+
 window.dataLayer = window.dataLayer || [];
 function gtag() {
   dataLayer.push(arguments);
@@ -37,8 +39,8 @@ fetch("https://api.lanyard.rest/v1/users/882595027132493864")
   .then((r) => r.json())
   .then((j) => {
     document.getElementById("pfp").classList.add(j.data.discord_status)
-    if (j.data.activities.length === 0) return;
-    let a = j.data.activities[0];
+    let a;
+    if (j.data.activities.length !== 0) a = j.data.activities[0];
     a.state = a.state.slice(0, a.state.lastIndexOf(';'));
     document.getElementById('activity').innerText = `${a.name}\n${a.details}\n${a.state}`;
   });
